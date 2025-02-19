@@ -1,39 +1,112 @@
+using System.Collections;
 using UnityEngine;
 
-public enum handState
+public enum HandStateEnum
 {
-    Default, Charging, Hiting, Blocking
+    Default, Charging, Hitting, Blocking
 }
+
 public class HandState : MonoBehaviour
 {
-    public handState handState = handState.Default;
-    [SerializeField] Sprite[] hands; // 0->Default//Punching 1-> 1->Blocking
-    SpriteRenderer spriteRenderer;
+    public HandStateEnum handState = HandStateEnum.Default;
+
+    [SerializeField] private Sprite[] hands; // 0->Default, 1->Blocking
+    private SpriteRenderer spriteRenderer;
+
+    [SerializeField] private bool playerHand, isLeftHand;
+
+    // Hit logic
+    private Vector3 startPos;
+    private bool isMoving = false;
+
+    [SerializeField] private float hitDuration = 0.5f;
+    [SerializeField] private float hitHeight = 1.0f;
+    [SerializeField] private float hitAmplitude = 2.0f;
+
+    private Coroutine hitCoroutine;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        startPos = transform.position;
     }
+
     private void Update()
     {
-        if (handState != handState.Blocking)
-        {
-            spriteRenderer.sprite = hands[0];
-        } 
-        else
-        {
-            spriteRenderer.sprite = hands[1];
-        }
+        spriteRenderer.sprite = handState == HandStateEnum.Blocking ? hands[1] : hands[0];
     }
+
     public void OnBlock(bool blocking)
     {
-        if (blocking)
+        handState = blocking ? HandStateEnum.Blocking : HandStateEnum.Default;
+    }
+
+    public void OnHit()
+    {
+        if (playerHand && handState == HandStateEnum.Default && !isMoving)
         {
-            handState = handState.Blocking;
+            handState = HandStateEnum.Hitting;
+            hitCoroutine = StartCoroutine(ParabolicMovement());
         }
-        else
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (handState != HandStateEnum.Hitting) return; // Solo procesar colisión si está golpeando
+
+        if (collision.CompareTag("Hand"))
         {
-            handState = handState.Default;
+            HandState otherHand = collision.GetComponent<HandState>();
+            if (otherHand != null && otherHand.handState == HandStateEnum.Blocking)
+            {
+                CancelHit();
+                Debug.Log("Blocked!");
+            }
+        }
+        else if (collision.CompareTag("Enemy"))
+        {
+            CancelHit();
+            Debug.Log("Hit!");
+        }
+    }
+
+    private IEnumerator ParabolicMovement()
+    {
+        isMoving = true;
+        Vector3 endPos = startPos + (isLeftHand ? Vector3.right : Vector3.left) * hitAmplitude;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < hitDuration && handState == HandStateEnum.Hitting)
+        {
+            float t = elapsedTime / hitDuration;
+            float height = Mathf.Sin(t * Mathf.PI) * hitHeight;
+            transform.position = Vector3.Lerp(startPos, endPos, t) + Vector3.up * height;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        CancelHit();
+    }
+
+    private void CancelHit()
+    {
+        if (hitCoroutine != null) StopCoroutine(hitCoroutine);
+        transform.position = startPos;
+        handState = HandStateEnum.Default;
+        isMoving = false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Vector3 endPos = transform.position + (isLeftHand ? Vector3.right : Vector3.left) * hitAmplitude;
+        Gizmos.DrawLine(transform.position, endPos);
+
+        for (float t = 0; t <= 1; t += 0.1f)
+        {
+            float height = Mathf.Sin(t * Mathf.PI) * hitHeight;
+            Vector3 point = Vector3.Lerp(transform.position, endPos, t) + Vector3.up * height;
+            Gizmos.DrawSphere(point, 0.1f);
         }
     }
 }
