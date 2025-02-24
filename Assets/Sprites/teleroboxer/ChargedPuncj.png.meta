@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 643a077727e52e142a9eab9f22e4abab
+guid: 60740bdd609d61547962b7134482cf79
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8403343131331654545
-    second: teleroboxer.large_0
+      213: -4417643725127884536
+    second: "pu\xF1o cargado izq_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,10 +48,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: teleroboxer.large_0
+      name: "pu\xF1o cargado izq_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 384
-        height: 225
+        x: 14
+        y: 9
+        width: 45
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6c0243e1f3516b80800000000000000
-      internalID: -8403343131331654545
+      spriteID: 801e48b007061b2c0800000000000000
+      internalID: -4417643725127884536
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      teleroboxer.large_0: -8403343131331654545
+      "pu\xF1o cargado izq_0": -4417643725127884536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -26,7 +26,7 @@ public class BoxerController : MonoBehaviour
             right.OnBlock(false);
         }
     }
-    /*void OnLeftBlock(InputValue v)
+    void OnLeftBlock(InputValue v)
     {
         Debug.Log("Left");
         if (v.Get<float>() == 1)
@@ -37,9 +37,13 @@ public class BoxerController : MonoBehaviour
         {
             left.OnBlock(false);
         }
-    }*/
+    }
     void OnRightHit()
     {   
         right.OnHit();
+    }
+    void OnLeftHit()
+    {
+        left.OnHit();
     }
 }

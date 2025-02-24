@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 643a077727e52e142a9eab9f22e4abab
+guid: b80e106d10815fc4881a88f2a09c4984
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8403343131331654545
-    second: teleroboxer.large_0
+      213: 338474605059863481
+    second: EnemyPunch_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: teleroboxer.large_0
+      name: EnemyPunch_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 384
-        height: 225
+        width: 43
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6c0243e1f3516b80800000000000000
-      internalID: -8403343131331654545
+      spriteID: 9b375182cd082b400800000000000000
+      internalID: 338474605059863481
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      teleroboxer.large_0: -8403343131331654545
+      EnemyPunch_0: 338474605059863481
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

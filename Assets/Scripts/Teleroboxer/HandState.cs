@@ -10,7 +10,7 @@ public class HandState : MonoBehaviour
 {
     public HandStateEnum handState = HandStateEnum.Default;
 
-    [SerializeField] private Sprite[] hands; // 0->Default, 1->Blocking
+    [SerializeField] public Sprite[] hands; // 0->Default, 1->Blocking
     private SpriteRenderer spriteRenderer;
 
     [SerializeField] private bool playerHand, isLeftHand;
@@ -54,19 +54,17 @@ public class HandState : MonoBehaviour
     {
         if (handState != HandStateEnum.Hitting) return; // Solo procesar colisión si está golpeando
 
-        if (collision.CompareTag("Hand"))
+        if (collision.CompareTag("EnemyHand"))
         {
             HandState otherHand = collision.GetComponent<HandState>();
             if (otherHand != null && otherHand.handState == HandStateEnum.Blocking)
             {
                 CancelHit();
-                Debug.Log("Blocked!");
             }
         }
         else if (collision.CompareTag("Enemy"))
         {
             CancelHit();
-            Debug.Log("Hit!");
         }
     }
 
