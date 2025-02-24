@@ -10,6 +10,7 @@ public class EnemyHandsSpriteChanger : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         handSprites = GetComponent<HandState>();
+        ehc = GetComponent<EnemyHandController>();
     }
 
     private void Update()
