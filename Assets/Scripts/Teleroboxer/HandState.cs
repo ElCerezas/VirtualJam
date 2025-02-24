@@ -33,7 +33,7 @@ public class HandState : MonoBehaviour
 
     private void Update()
     {
-        spriteRenderer.sprite = handState == HandStateEnum.Blocking ? hands[1] : hands[0];
+        //spriteRenderer.sprite = handState == HandStateEnum.Blocking ? hands[1] : hands[0];
     }
 
     public void OnBlock(bool blocking)

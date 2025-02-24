@@ -588,6 +588,7 @@ GameObject:
   - component: {fileID: 1369446841}
   - component: {fileID: 1369446842}
   - component: {fileID: 1369446844}
+  - component: {fileID: 1369446845}
   m_Layer: 6
   m_Name: Left
   m_TagString: EnemyHand
@@ -654,8 +655,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 338474605059863481, guid: b80e106d10815fc4881a88f2a09c4984, type: 3}
-  m_Color: {r: 0.94509804, g: 0.871846, b: 0.26274514, a: 1}
+  m_Sprite: {fileID: -4417643725127884536, guid: 60740bdd609d61547962b7134482cf79, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -703,7 +704,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4333333, y: 1.2}
+    oldSize: {x: 1.5, y: 1.2666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -776,8 +777,18 @@ MonoBehaviour:
   chargeTime: 1.5
   hitScaleIncrease: 0.5
   hitDuration: 0.5
-  baseSprite: {fileID: 338474605059863481, guid: b80e106d10815fc4881a88f2a09c4984, type: 3}
-  chargedSprite: {fileID: -4417643725127884536, guid: 60740bdd609d61547962b7134482cf79, type: 3}
+--- !u!114 &1369446845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369446838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b30955917d2964780b2bf572e7000c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1452149493
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,6 +958,7 @@ GameObject:
   - component: {fileID: 1836816641}
   - component: {fileID: 1836816640}
   - component: {fileID: 1836816643}
+  - component: {fileID: 1836816644}
   m_Layer: 6
   m_Name: Right
   m_TagString: EnemyHand
@@ -1056,7 +1068,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4333333, y: 1.2}
+    oldSize: {x: 1.5, y: 1.2666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1108,8 +1120,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 338474605059863481, guid: b80e106d10815fc4881a88f2a09c4984, type: 3}
-  m_Color: {r: 0.94509804, g: 0.871846, b: 0.26274514, a: 1}
+  m_Sprite: {fileID: -4417643725127884536, guid: 60740bdd609d61547962b7134482cf79, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -1135,8 +1147,18 @@ MonoBehaviour:
   chargeTime: 1.5
   hitScaleIncrease: 0.5
   hitDuration: 0.5
-  baseSprite: {fileID: 338474605059863481, guid: b80e106d10815fc4881a88f2a09c4984, type: 3}
-  chargedSprite: {fileID: -4417643725127884536, guid: 60740bdd609d61547962b7134482cf79, type: 3}
+--- !u!114 &1836816644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836816637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b30955917d2964780b2bf572e7000c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &779154643038774591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 793525465725883956, guid: 44311e2a7ad5ed146bcf1f38919bfe1f, type: 3}
