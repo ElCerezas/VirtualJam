@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 658120885}
   - component: {fileID: 658120886}
   - component: {fileID: 658120887}
+  - component: {fileID: 658120888}
   m_Layer: 3
   m_Name: Right
   m_TagString: PlayerRightHand
@@ -314,9 +315,6 @@ MonoBehaviour:
   - {fileID: 6817331996629699431, guid: c8894781911e9c24aa15ecc9544dd78c, type: 3}
   playerHand: 1
   isLeftHand: 0
-  hitDuration: 1.5
-  hitHeight: 6.18
-  hitAmplitude: 8.31
 --- !u!61 &658120886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -390,6 +388,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &658120888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658120882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01439b2bfb427b24785996ec13e4e77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handState: 0
+  hands:
+  - {fileID: 1918632042989470748, guid: 690f2b042453827489af05dc4c39ca52, type: 3}
+  - {fileID: 5706364631294014044, guid: 3b7bea0e86b71ea44ac87cf87911d8aa, type: 3}
+  isLeftHand: 0
+  hitDuration: 0.5
+  hitHeight: 1
+  hitAmplitude: 2
+  blockYOffset: 0.5
 --- !u!1 &1190246540
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +422,7 @@ GameObject:
   - component: {fileID: 1190246543}
   - component: {fileID: 1190246542}
   - component: {fileID: 1190246541}
+  - component: {fileID: 1190246546}
   m_Layer: 3
   m_Name: Left
   m_TagString: PlayerLeftHand
@@ -501,9 +521,6 @@ MonoBehaviour:
   - {fileID: 5706364631294014044, guid: 3b7bea0e86b71ea44ac87cf87911d8aa, type: 3}
   playerHand: 1
   isLeftHand: 1
-  hitDuration: 1.5
-  hitHeight: 6.18
-  hitAmplitude: 9.29
 --- !u!212 &1190246544
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -574,6 +591,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1452149496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1190246546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190246540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01439b2bfb427b24785996ec13e4e77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handState: 0
+  hands:
+  - {fileID: -2181416871737517897, guid: a2d5a2707df6ed4498e87bcea949437d, type: 3}
+  - {fileID: 6817331996629699431, guid: c8894781911e9c24aa15ecc9544dd78c, type: 3}
+  isLeftHand: 1
+  hitDuration: 0.5
+  hitHeight: 1
+  hitAmplitude: 2
+  blockYOffset: 0.5
 --- !u!1 &1369446838
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,9 +769,6 @@ MonoBehaviour:
   - {fileID: -4417643725127884536, guid: 60740bdd609d61547962b7134482cf79, type: 3}
   playerHand: 0
   isLeftHand: 0
-  hitDuration: 0.37
-  hitHeight: -2.9
-  hitAmplitude: -15.18
 --- !u!50 &1369446843
 Rigidbody2D:
   serializedVersion: 5
@@ -777,6 +812,7 @@ MonoBehaviour:
   chargeTime: 1.5
   hitScaleIncrease: 0.5
   hitDuration: 0.5
+  blockYOffset: 2
 --- !u!114 &1369446845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1027,9 +1063,6 @@ MonoBehaviour:
   - {fileID: -4417643725127884536, guid: 60740bdd609d61547962b7134482cf79, type: 3}
   playerHand: 0
   isLeftHand: 0
-  hitDuration: 0.37
-  hitHeight: -2.9
-  hitAmplitude: -15.18
 --- !u!61 &1836816641
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1147,6 +1180,7 @@ MonoBehaviour:
   chargeTime: 1.5
   hitScaleIncrease: 0.5
   hitDuration: 0.5
+  blockYOffset: 2
 --- !u!114 &1836816644
 MonoBehaviour:
   m_ObjectHideFlags: 0
