@@ -14,7 +14,7 @@ public class NarrativeManager : MonoBehaviour
 
     [SerializeField] DialogScriptableObj[] Chapter1, Chapter2, Chapter3;
     [SerializeField] TMP_Text dialog, characterName;
-    [SerializeField] Image background, character;
+    [SerializeField] Image background, character, textImage;
     [SerializeField] AudioSource typingSound; // Sonido de máquina de escribir
     [SerializeField] float typingSpeed = 0.05f; // Velocidad de escritura
 
@@ -67,8 +67,9 @@ public class NarrativeManager : MonoBehaviour
 
     void ShowDialog()
     {
-        background.sprite = actualDialog.GetBackground();
-        character.sprite = actualDialog.GetCharacter();
+        textImage.sprite = actualDialog.TextImage;
+        background.sprite = actualDialog.Background;
+        character.sprite = actualDialog.Character;
         characterName.text = actualDialog.GetName();
 
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
