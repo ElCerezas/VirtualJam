@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class NarrativeManager : MonoBehaviour
 {
     static int dialogIndex = 0;
+    static int chapterIndex = 0;
     GameManager gameManager;
-    DialogScriptableObj actualDialog;
 
-    [SerializeField] DialogScriptableObj[] dialogs;
+    DialogScriptableObj actualDialog;
+    DialogScriptableObj[] actualScene;
+
+    [SerializeField] DialogScriptableObj[] Chapter1, Chapter2, Chapter3;
     [SerializeField] TMP_Text dialog, characterName;
     [SerializeField] Image background, character;
     [SerializeField] AudioSource typingSound; // Sonido de máquina de escribir
@@ -17,6 +20,7 @@ public class NarrativeManager : MonoBehaviour
 
     private Coroutine typingCoroutine;
     private bool isTyping = false;
+   
 
     private void Start()
     {
@@ -33,29 +37,31 @@ public class NarrativeManager : MonoBehaviour
             isTyping = false;
             return;
         }
-
-        switch (dialogIndex)
+        if (dialogIndex < actualScene.Length)
         {
-            case 200:
-                dialogIndex++;
-                gameManager.GoToScene(2); // Cambio de escena en 200
-                break;
-            case 300:
-                dialogIndex++;
-                gameManager.GoToScene(3); // Cambio de escena en 300
-                break;
-            case 400:
-                dialogIndex++;
-                gameManager.GoToScene(4); // Cambio de escena en 400
-                break;
-            default:
-                if (dialogIndex < dialogs.Length)
-                {
-                    actualDialog = dialogs[dialogIndex];
-                    ShowDialog();
-                    dialogIndex++;
-                }
-                break;
+            actualDialog = actualScene[dialogIndex];
+            ShowDialog();
+            dialogIndex++;
+        }
+        else
+        {
+            dialogIndex = 0;
+            chapterIndex++;
+            switch (chapterIndex)
+            {
+                case 1:
+                    gameManager.GoToScene(2);
+                    break;
+                case 2:
+                    gameManager.GoToScene(3);
+                    break;
+                case 3:
+                    gameManager.GoToScene(4);
+                    break;
+                default:
+                    gameManager.GoToScene(5); //Ending
+                    break;
+            }
         }
     }
 
