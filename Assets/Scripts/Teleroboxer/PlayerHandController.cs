@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerHandController : MonoBehaviour
 {
-    public HandStateEnum handState = HandStateEnum.Default;
+    public HandState handState;
 
     private SpriteRenderer spriteRenderer;
     private Vector3 originalPosition;
@@ -28,18 +28,19 @@ public class PlayerHandController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalPosition = transform.position;
         originalScale = transform.localScale;
+        handState = GetComponent<HandState>();
     }
 
     private void Update()
     {
-        spriteRenderer.sprite = handState == HandStateEnum.Blocking ? hands[1] : hands[0];
+        spriteRenderer.sprite = handState.handState == HandStateEnum.Blocking ? hands[1] : hands[0];
     }
 
     public void OnBlock(bool blocking)
     {
-        if (handState == HandStateEnum.Default || handState == HandStateEnum.Blocking)
+        if (handState.handState == HandStateEnum.Default || handState.handState == HandStateEnum.Blocking)
         {
-            handState = blocking ? HandStateEnum.Blocking : HandStateEnum.Default;
+            handState.handState = blocking ? HandStateEnum.Blocking : HandStateEnum.Default;
 
             if (blocking)
             {
@@ -59,9 +60,9 @@ public class PlayerHandController : MonoBehaviour
 
     public void OnHit()
     {
-        if (handState == HandStateEnum.Default && !isMoving)
+        if (handState.handState == HandStateEnum.Default && !isMoving)
         {
-            handState = HandStateEnum.Hitting;
+            handState.handState = HandStateEnum.Hitting;
             hitCoroutine = StartCoroutine(ParabolicMovement());
         }
     }
@@ -72,7 +73,7 @@ public class PlayerHandController : MonoBehaviour
         Vector3 endPos = originalPosition + (isLeftHand ? Vector3.right : Vector3.left) * hitAmplitude;
         float elapsedTime = 0f;
 
-        while (elapsedTime < hitDuration && handState == HandStateEnum.Hitting)
+        while (elapsedTime < hitDuration && handState.handState == HandStateEnum.Hitting)
         {
             float t = elapsedTime / hitDuration;
             float height = Mathf.Sin(t * Mathf.PI) * hitHeight;
@@ -86,7 +87,7 @@ public class PlayerHandController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (handState != HandStateEnum.Hitting) return;
+        if (handState.handState != HandStateEnum.Hitting) return;
 
         if (collision.CompareTag("EnemyHand"))
         {
@@ -108,7 +109,7 @@ public class PlayerHandController : MonoBehaviour
     {
         if (hitCoroutine != null) StopCoroutine(hitCoroutine);
         transform.position = originalPosition;
-        handState = HandStateEnum.Default;
+        handState.handState = HandStateEnum.Default;
         isMoving = false;
     }
 

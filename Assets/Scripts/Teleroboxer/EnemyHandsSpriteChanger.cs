@@ -15,7 +15,7 @@ public class EnemyHandsSpriteChanger : MonoBehaviour
 
     private void Update()
     {
-        switch (ehc.handState)
+        switch (handSprites.handState)
         {
             case HandStateEnum.Default:
                 spriteRenderer.sprite = handSprites.hands[0]; // Sprite normal
