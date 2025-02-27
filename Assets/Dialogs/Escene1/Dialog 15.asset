@@ -17,4 +17,4 @@ MonoBehaviour:
   TextImage: {fileID: 0}
   Name: "Psic\xF3loga"
   Dialog: (Si que es verdad, parece que lleve una mochila)
-  writtingSpeed: 0.5
+  writtingSpeed: 0.1

@@ -17,4 +17,4 @@ MonoBehaviour:
   TextImage: {fileID: 0}
   Name: 
   Dialog: "<Silencio Inc\xF3modo>"
-  writtingSpeed: 1
+  writtingSpeed: 0.1

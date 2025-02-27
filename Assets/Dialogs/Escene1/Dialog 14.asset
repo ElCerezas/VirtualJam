@@ -17,4 +17,4 @@ MonoBehaviour:
   TextImage: {fileID: 0}
   Name: Rin
   Dialog: " Y es que, por m\xE1s que lo intente, no puedo parar."
-  writtingSpeed: 0.5
+  writtingSpeed: 0.1

@@ -18,4 +18,4 @@ MonoBehaviour:
   Name: Rin
   Dialog: "Aparte me est\xE1 dejando mal de la vista y tengo la columna s\xFAper
     arqueada desde que juego."
-  writtingSpeed: 0.5
+  writtingSpeed: 0.1

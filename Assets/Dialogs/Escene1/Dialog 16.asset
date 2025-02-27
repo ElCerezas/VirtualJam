@@ -17,4 +17,4 @@ MonoBehaviour:
   TextImage: {fileID: 0}
   Name: "Psic\xF3loga"
   Dialog: "Mhm y dime,\n\xBFC\xF3mo te sientes? \xBFQu\xE9 sientes al jugar?"
-  writtingSpeed: 0.5
+  writtingSpeed: 0.1

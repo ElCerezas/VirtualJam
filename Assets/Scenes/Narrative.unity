@@ -228,15 +228,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44814de4643bff24681943cf1d642269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogs:
-  - {fileID: 11400000, guid: 2ce20a5d54cb9204b888781a2ceb050f, type: 2}
-  - {fileID: 11400000, guid: 2ce20a5d54cb9204b888781a2ceb050f, type: 2}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 2ce20a5d54cb9204b888781a2ceb050f, type: 2}
+  Chapter1:
+  - {fileID: 11400000, guid: 955835c0c74df2b419f215dc3227c260, type: 2}
+  - {fileID: 11400000, guid: b25195ad4f2419a4b92b0c8c3ffa1b30, type: 2}
+  - {fileID: 11400000, guid: 1c4fa6edbe25c7748a657663f4a1126f, type: 2}
+  - {fileID: 11400000, guid: 2274d25d2fe6e9b4cb268ee557e5ba49, type: 2}
+  - {fileID: 11400000, guid: cc44eea87b64c0043857cb0b5406d0ca, type: 2}
+  - {fileID: 11400000, guid: 868c6b012928bfe4490c631a19d73d19, type: 2}
+  - {fileID: 11400000, guid: 79cd0ba945143644085e958ff061f0d0, type: 2}
+  - {fileID: 11400000, guid: fd40584139eb7764998b8c1291fb6dcc, type: 2}
+  - {fileID: 11400000, guid: e1b3874c87e95e24dbc18b4f3442d7aa, type: 2}
+  - {fileID: 11400000, guid: f7c89c624e6ba604f83ccb50ab29a321, type: 2}
+  - {fileID: 11400000, guid: 1887dd05f311bea4e8f1069c65bd67d1, type: 2}
+  - {fileID: 11400000, guid: 2adf6f690268e624394d601025c8016d, type: 2}
+  - {fileID: 11400000, guid: 83100c30a9cd3614d9e1aa404dc9cc44, type: 2}
+  - {fileID: 11400000, guid: 938cd7b635b8c9349a922f469ee78ecd, type: 2}
+  - {fileID: 11400000, guid: 39333340b4c6dda4cbc2fa365d6661d4, type: 2}
+  - {fileID: 11400000, guid: d11fcd89d41e9044cb7e04a2b2884504, type: 2}
+  - {fileID: 11400000, guid: 72de35060fa3e6f499038926b80d68cc, type: 2}
+  - {fileID: 11400000, guid: 73026c65e6aaefc43809641b165d5f4a, type: 2}
+  - {fileID: 11400000, guid: 54af54e73350acd44a59ae0e2c63d43b, type: 2}
+  - {fileID: 11400000, guid: 5b43ef6af6d6d5f44a1782604f10a270, type: 2}
+  - {fileID: 11400000, guid: e176d9430c438f14e9c6cc9c16555c9d, type: 2}
+  - {fileID: 11400000, guid: dbe8bc1f4f16c794a9de95165b7219a8, type: 2}
+  - {fileID: 11400000, guid: 188a4095f55ac1644ace743e2f29ec80, type: 2}
+  - {fileID: 11400000, guid: ff25cfe9a652e244ab425afc57d8fad1, type: 2}
+  - {fileID: 11400000, guid: 9e5fcd053a9cf8c47ac507b9f3935898, type: 2}
+  - {fileID: 11400000, guid: 57c72e83684c1f742b6f0d611d74f87a, type: 2}
+  - {fileID: 11400000, guid: 418ffeeb5f0356c48940d6ff5ad87d4d, type: 2}
+  Chapter2: []
+  Chapter3: []
   dialog: {fileID: 603158523}
   characterName: {fileID: 1766455491}
   background: {fileID: 162426436}
   character: {fileID: 694836277}
+  textImage: {fileID: 0}
   typingSound: {fileID: 348529734}
   typingSpeed: 0.05
 --- !u!114 &348529730

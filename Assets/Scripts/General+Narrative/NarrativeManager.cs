@@ -25,6 +25,15 @@ public class NarrativeManager : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        switch (chapterIndex)
+        {
+            case 0:
+                actualScene = Chapter1; break;
+            case 1:
+                actualScene = Chapter2; break;
+            case 2:
+                actualScene = Chapter3; break;
+        }
         OnNextDialog();
     }
 
@@ -34,6 +43,7 @@ public class NarrativeManager : MonoBehaviour
         {
             StopCoroutine(typingCoroutine);
             dialog.text = actualDialog.GetDialog();
+            if (typingSound) typingSound.Stop();
             isTyping = false;
             return;
         }
@@ -67,9 +77,9 @@ public class NarrativeManager : MonoBehaviour
 
     void ShowDialog()
     {
-        textImage.sprite = actualDialog.TextImage;
-        background.sprite = actualDialog.Background;
-        character.sprite = actualDialog.Character;
+        /*textImage.sprite = actualDialog?.TextImage;
+        background.sprite = actualDialog?.Background;
+        character.sprite = actualDialog?.Character;*/
         characterName.text = actualDialog.GetName();
 
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
@@ -81,13 +91,13 @@ public class NarrativeManager : MonoBehaviour
         isTyping = true;
         dialog.text = "";
 
+        if (typingSound) typingSound.Play();
         foreach (char letter in text.ToCharArray())
         {
             dialog.text += letter;
-            if (typingSound) typingSound.Play();
-            yield return new WaitForSeconds(typingSpeed);
+            yield return new WaitForSeconds(actualDialog.writtingSpeed);
         }
-
+        if (typingSound) typingSound.Stop();
         isTyping = false;
     }
 }

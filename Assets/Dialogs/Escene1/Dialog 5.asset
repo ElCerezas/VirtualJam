@@ -19,4 +19,4 @@ MonoBehaviour:
   Dialog: 'Emmm, bien...
 
     Supongo...'
-  writtingSpeed: 0.5
+  writtingSpeed: 0.1

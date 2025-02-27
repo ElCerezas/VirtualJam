@@ -17,4 +17,4 @@ MonoBehaviour:
   TextImage: {fileID: 0}
   Name: "Psic\xF3loga"
   Dialog: "Bueno, al caso,\ncu\xE9ntame un poco el porqu\xE9 has decidido venir"
-  writtingSpeed: 0.5
+  writtingSpeed: 0.1

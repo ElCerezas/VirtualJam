@@ -17,4 +17,4 @@ MonoBehaviour:
   TextImage: {fileID: 0}
   Name: "Psic\xF3loga"
   Dialog: "Interesante, cu\xE9ntame m\xE1s."
-  writtingSpeed: 0.5
+  writtingSpeed: 0.1

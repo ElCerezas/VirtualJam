@@ -17,4 +17,4 @@ MonoBehaviour:
   TextImage: {fileID: 0}
   Name: "Psicol\xF3ga"
   Dialog: "\xBFComo est\xE1s Rin?"
-  writtingSpeed: 0.5
+  writtingSpeed: 0.1

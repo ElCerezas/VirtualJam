@@ -17,4 +17,4 @@ MonoBehaviour:
   TextImage: {fileID: 0}
   Name: Rin
   Dialog: "Esque...\npues \u2026"
-  writtingSpeed: 1
+  writtingSpeed: 0.1

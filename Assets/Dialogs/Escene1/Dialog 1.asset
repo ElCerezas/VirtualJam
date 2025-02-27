@@ -17,3 +17,4 @@ MonoBehaviour:
   TextImage: {fileID: 0}
   Name: 
   Dialog: " \xBFQuieres abrir la puerta?"
+  writtingSpeed: 0.1

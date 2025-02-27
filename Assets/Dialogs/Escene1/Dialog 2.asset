@@ -17,3 +17,4 @@ MonoBehaviour:
   TextImage: {fileID: 0}
   Name: ???
   Dialog: "\xA1Pasa! \xA1Pasa!"
+  writtingSpeed: 0.1
