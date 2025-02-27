@@ -19,8 +19,8 @@ public class EnemyBoxerController : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(actionCooldown);
-            int actionLeft = Random.Range(0, 3);  // Acción de la mano izquierda
-            int actionRight = Random.Range(0, 3); // Acción de la mano derecha
+            int actionLeft = Random.Range(0, 2);  // Acción de la mano izquierda
+            int actionRight = Random.Range(0, 2); // Acción de la mano derecha
 
             ExecuteAction(leftHand, actionLeft);
             ExecuteAction(rightHand, actionRight);
@@ -37,7 +37,7 @@ public class EnemyBoxerController : MonoBehaviour
             case 1:
                 hand.StartBlock();
                 break;
-            case 2:
+            default:
                 // No hacer nada (reposo)
                 break;
         }

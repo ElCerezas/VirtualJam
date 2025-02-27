@@ -13,6 +13,7 @@ public class EnemyHandController : MonoBehaviour
     [SerializeField] private float hitDuration = 0.5f;  // Tiempo que la mano permanece agrandada
     [SerializeField] private float blockYOffset = 0.5f; // Distancia que sube la mano al bloquear
     [SerializeField] HandState handToCheck;
+    BoxerUIController boxerUIController;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class EnemyHandController : MonoBehaviour
         originalPosition = transform.position; // Guarda la posición original
         spriteChanger = GetComponent<EnemyHandsSpriteChanger>(); // Obtener el manejador de sprites
         handState = GetComponent<HandState>();
+        boxerUIController = GameObject.FindGameObjectWithTag("Respawn").GetComponent<BoxerUIController>();
     }
 
     /// Inicia la secuencia de carga y golpe.
@@ -41,10 +43,12 @@ public class EnemyHandController : MonoBehaviour
         if (handToCheck.handState == HandStateEnum.Blocking)
         {
             Debug.Log("¡El jugador ha bloqueado el golpe!");
+            boxerUIController.OnHit(true, true);
         }
         else
         {
             Debug.Log("¡Golpe exitoso al jugador!");
+            boxerUIController.OnHit(false, true);
         }
 
         // Fase de golpe

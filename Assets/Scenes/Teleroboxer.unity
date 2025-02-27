@@ -329,9 +329,10 @@ GameObject:
   - component: {fileID: 534321972}
   - component: {fileID: 534321971}
   - component: {fileID: 534321970}
+  - component: {fileID: 534321974}
   m_Layer: 5
   m_Name: UI
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,6 +421,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &534321974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534321969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd366bc03ae09754ab5a776adce9c6a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 1452149497}
+  enemyStats: {fileID: 1880258143878348129}
+  playerLifebar: {fileID: 1943200501}
+  enemyLifebar: {fileID: 2119357729}
+  damage: 10
 --- !u!1 &612726209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,8 +1510,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHand: {fileID: 1190246540}
   rightHand: {fileID: 658120882}
-  health: 100
-  maxHealth: 100
+  health: 200
+  maxHealth: 200
 --- !u!114 &1452149498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1806,7 +1824,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1832,9 +1850,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1921,9 +1939,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1950,6 +1968,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionCooldown: 2
+--- !u!114 &1880258143878348129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 340981951484586527, guid: 44311e2a7ad5ed146bcf1f38919bfe1f, type: 3}
+  m_PrefabInstance: {fileID: 6265374038839219640}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880258143878348124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7436e939088fa469f11644c7ee918d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6265374038839219640
 PrefabInstance:
   m_ObjectHideFlags: 0

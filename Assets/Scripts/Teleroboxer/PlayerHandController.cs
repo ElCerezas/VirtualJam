@@ -20,6 +20,7 @@ public class PlayerHandController : MonoBehaviour
     [SerializeField] private float blockXOffset = 0.2f; // Desplazamiento en X al bloquear
     [SerializeField] private float blockScaleIncrease = 0.3f; // Cuánto se agranda al bloquear
 
+    BoxerUIController boxerUIController;
     private Coroutine hitCoroutine;
     private bool isMoving = false;
 
@@ -29,6 +30,7 @@ public class PlayerHandController : MonoBehaviour
         originalPosition = transform.position;
         originalScale = transform.localScale;
         handState = GetComponent<HandState>();
+        boxerUIController = GameObject.FindGameObjectWithTag("Respawn").GetComponent<BoxerUIController>();
     }
 
     private void Update()
@@ -96,12 +98,14 @@ public class PlayerHandController : MonoBehaviour
             {
                 CancelHit();
                 Debug.Log("Golpe bloqueado por el enemigo.");
+                boxerUIController.OnHit(true, false);
             }
         }
         else if (collision.CompareTag("Enemy"))
         {
             CancelHit();
             Debug.Log("Golpe impactado en el enemigo.");
+            boxerUIController.OnHit(false, false);
         }
     }
 
