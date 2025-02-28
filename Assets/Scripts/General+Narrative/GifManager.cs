@@ -19,7 +19,7 @@ public class GifManager : MonoBehaviour
         if (elapsedTime < speed)
         {
             elapsedTime += Time.deltaTime;
-            Debug.Log(elapsedTime);
+            //Debug.Log(elapsedTime);
         }
         else
         {
