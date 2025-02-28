@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public int savedChapter = 0;
+    public int savedDialog = 0;
     private void Awake()
     {
         //Singleton setUp
@@ -24,8 +26,19 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void GoToScene(int scene)
+    public void NarrativeGoToGame(int scene)
     {
+        savedDialog = NarrativeManager.dialogIndex;
+        savedChapter = NarrativeManager.chapterIndex;
         SceneManager.LoadScene(scene);
+    }
+    public void GameWin()
+    {
+        savedChapter++;
+        savedDialog = 0;
+    }
+    public int GetSceneIndex()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
     }
 }

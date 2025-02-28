@@ -12,7 +12,7 @@ public class NarrativeManager : MonoBehaviour
     DialogScriptableObj actualDialog;
     DialogScriptableObj[] actualScene;
 
-    [SerializeField] DialogScriptableObj[] Chapter1, Chapter2, Chapter3;
+    [SerializeField] DialogScriptableObj[] Chapter1, Chapter2, Chapter3, Chapter4;
     [SerializeField] TMP_Text dialog, characterName;
     [SerializeField] Image background, character, textImage;
     [SerializeField] Image fader; //Imagen negra para transición
@@ -26,12 +26,16 @@ public class NarrativeManager : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        Debug.Log("WakeyWakey time for school");
 
+        chapterIndex = gameManager.savedChapter;
+        dialogIndex = gameManager.savedDialog;
         switch (chapterIndex)
         {
             case 0: actualScene = Chapter1; break;
             case 1: actualScene = Chapter2; break;
             case 2: actualScene = Chapter3; break;
+            case 3: actualScene = Chapter4; break;
         }
         OnNextDialog();
     }
@@ -88,11 +92,11 @@ public class NarrativeManager : MonoBehaviour
             chapterIndex++;
             switch (chapterIndex)
             {
-                case 1: gameManager.GoToScene(2); break;
-                case 2: gameManager.GoToScene(3); break;
-                case 3: gameManager.GoToScene(4); break;
+                case 1: gameManager.NarrativeGoToGame(2); break;//Boxer
+                case 2: gameManager.NarrativeGoToGame(3); break;//Tennis
+                case 3: gameManager.NarrativeGoToGame(4); break;//Wario
                 default:
-                    gameManager.GoToScene(5); // Ending
+                    gameManager.NarrativeGoToGame(5); // Ending
                     break;
             }
         }
