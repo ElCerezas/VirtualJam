@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -8,8 +9,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public int savedChapter = 0;
-    public int savedDialog = 0;
     private void Awake()
     {
         //Singleton setUp
@@ -21,6 +20,12 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         //End of Singleton
+        PlayerPrefs.GetInt("chapterIndex", 0);
+        PlayerPrefs.GetInt("dialogIndex", 0);
+
+        //ToDeleteAfterTest
+        PlayerPrefs.SetInt("chapterIndex", 0);
+        PlayerPrefs.SetInt("dialogIndex", 0);
     }
     public void NextScene()
     {
@@ -28,14 +33,19 @@ public class GameManager : MonoBehaviour
     }
     public void NarrativeGoToGame(int scene)
     {
-        savedDialog = NarrativeManager.dialogIndex;
-        savedChapter = NarrativeManager.chapterIndex;
+        PlayerPrefs.SetInt("dialogIndex", NarrativeManager.dialogIndex);
+        PlayerPrefs.SetInt("chapterIndex", NarrativeManager.chapterIndex);
         SceneManager.LoadScene(scene);
     }
-    public void GameWin()
+    public static void GameWin()
     {
-        savedChapter++;
-        savedDialog = 0;
+        PlayerPrefs.SetInt("chapterIndex", PlayerPrefs.GetInt("chapterIndex"));
+        PlayerPrefs.SetInt("dialogIndex", 0);
+        SceneManager.LoadScene("Narrative");
+    }
+    public static void GameLose()
+    {
+        SceneManager.LoadScene("Narrative");
     }
     public int GetSceneIndex()
     {

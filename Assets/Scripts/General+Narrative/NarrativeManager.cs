@@ -28,8 +28,8 @@ public class NarrativeManager : MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         Debug.Log("WakeyWakey time for school");
 
-        chapterIndex = gameManager.savedChapter;
-        dialogIndex = gameManager.savedDialog;
+        chapterIndex = PlayerPrefs.GetInt("chapterIndex");
+        dialogIndex = PlayerPrefs.GetInt("dialogIndex");
         switch (chapterIndex)
         {
             case 0: actualScene = Chapter1; break;
