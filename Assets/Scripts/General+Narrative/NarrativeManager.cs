@@ -15,21 +15,20 @@ public class NarrativeManager : MonoBehaviour
     [SerializeField] DialogScriptableObj[] Chapter1, Chapter2, Chapter3, Chapter4;
     [SerializeField] TMP_Text dialog, characterName;
     [SerializeField] Image background, character, textImage;
-    [SerializeField] Image fader; //Imagen negra para transición
+    [SerializeField] Image fader;
     [SerializeField] AudioSource typingSound;
 
     private Coroutine typingCoroutine;
     private bool isTyping = false;
 
-    [SerializeField] private float fadeDuration = 0.5f; // Duración del fade
+    [SerializeField] private float fadeDuration = 0.5f;
 
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
-        Debug.Log("WakeyWakey time for school");
 
         chapterIndex = PlayerPrefs.GetInt("chapterIndex");
-        dialogIndex = PlayerPrefs.GetInt("dialogIndex");
+        if (PlayerPrefs.GetInt("dialogIndex") != 0) { dialogIndex = PlayerPrefs.GetInt("dialogIndex") - 2; } else { dialogIndex = 0; }
         switch (chapterIndex)
         {
             case 0: actualScene = Chapter1; break;
@@ -37,6 +36,7 @@ public class NarrativeManager : MonoBehaviour
             case 2: actualScene = Chapter3; break;
             case 3: actualScene = Chapter4; break;
         }
+        Debug.LogWarning($"Dialog: {dialogIndex} chapter: {chapterIndex}");
         OnNextDialog();
     }
 
@@ -46,12 +46,16 @@ public class NarrativeManager : MonoBehaviour
         {
             actualDialog = actualScene[dialogIndex];
         }
-        if (isTyping) // Si aún se está escribiendo, mostrar todo de golpe
+        if (isTyping)
         {
             StopCoroutine(typingCoroutine);
             dialog.text = actualDialog.GetDialog();
-            if (typingSound) typingSound.Stop();
             isTyping = false;
+
+            if (typingSound && typingSound.loop)
+            {
+                typingSound.Stop();
+            }
             return;
         }
         if (actualDialog.fadeOut)
@@ -67,13 +71,21 @@ public class NarrativeManager : MonoBehaviour
         if (textImage.enabled) textImage.sprite = actualDialog?.TextImage;
         if (character.enabled) character.sprite = actualDialog?.Character;
         if (background.enabled) background.sprite = actualDialog?.Background;
-        typingSound.clip = actualDialog.audio;
-        typingSound.loop = actualDialog.loopAudio;
         characterName.text = actualDialog.GetName();
+
+        if (typingSound)
+        {
+            typingSound.clip = actualDialog.audio;
+            typingSound.loop = actualDialog.loopAudio;
+
+            typingSound.Stop();
+            typingSound.Play();
+        }
 
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
         typingCoroutine = StartCoroutine(TypeText(actualDialog.GetDialog()));
     }
+
     void WhatNext()
     {
         if (dialogIndex < actualScene.Length)
@@ -92,36 +104,41 @@ public class NarrativeManager : MonoBehaviour
             chapterIndex++;
             switch (chapterIndex)
             {
-                case 1: gameManager.NarrativeGoToGame(2); break;//Boxer
-                case 2: gameManager.NarrativeGoToGame(3); break;//Tennis
-                case 3: gameManager.NarrativeGoToGame(4); break;//Wario
+                case 1: gameManager.NarrativeGoToGame(2); break;
+                case 2: gameManager.NarrativeGoToGame(3); break;
+                case 3: gameManager.NarrativeGoToGame(4); break;
                 default:
-                    gameManager.NarrativeGoToGame(5); // Ending
+                    gameManager.NarrativeGoToGame(5);
                     break;
             }
         }
     }
+
     IEnumerator TypeText(string text)
     {
         isTyping = true;
         dialog.text = "";
 
-        if (typingSound) typingSound.Play();
         foreach (char letter in text.ToCharArray())
         {
             dialog.text += letter;
             yield return new WaitForSeconds(actualDialog.writtingSpeed);
         }
-        if (typingSound) typingSound.Stop();
+
+        if (typingSound && typingSound.loop)
+        {
+            typingSound.Stop();
+        }
+
         isTyping = false;
     }
+
     IEnumerator FadeScreen(System.Action onComplete)
     {
         float elapsedTime = 0f;
         Color startColor = fader.color;
-        Color endColor = new Color(startColor.r, startColor.g, startColor.b, 1f); // Opaco
+        Color endColor = new Color(startColor.r, startColor.g, startColor.b, 1f);
 
-        // Fade Out (Oscurece la pantalla)
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
@@ -129,14 +146,12 @@ public class NarrativeManager : MonoBehaviour
             yield return null;
         }
 
-        // Ejecutar la acción (cambiar de diálogo)
         onComplete?.Invoke();
 
         elapsedTime = 0f;
         startColor = fader.color;
-        endColor = new Color(startColor.r, startColor.g, startColor.b, 0f); // Transparente
+        endColor = new Color(startColor.r, startColor.g, startColor.b, 0f);
 
-        // Fade In (Aparece el nuevo diálogo)
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
