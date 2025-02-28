@@ -17,4 +17,4 @@ MonoBehaviour:
   TextImage: {fileID: 0}
   Name: Rin
   Dialog: "\xA1Pues tengo una adicci\xF3n!"
-  writtingSpeed: 0.1
+  writtingSpeed: 0.05

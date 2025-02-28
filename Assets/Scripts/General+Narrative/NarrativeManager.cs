@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class NarrativeManager : MonoBehaviour
 {
-    static int dialogIndex = 0;
-    static int chapterIndex = 0;
+    public static int dialogIndex = 0;
+    public static int chapterIndex = 0;
     GameManager gameManager;
 
     DialogScriptableObj actualDialog;
@@ -16,7 +16,6 @@ public class NarrativeManager : MonoBehaviour
     [SerializeField] TMP_Text dialog, characterName;
     [SerializeField] Image background, character, textImage;
     [SerializeField] AudioSource typingSound; // Sonido de máquina de escribir
-    [SerializeField] float typingSpeed = 0.05f; // Velocidad de escritura
 
     private Coroutine typingCoroutine;
     private bool isTyping = false;
@@ -50,6 +49,9 @@ public class NarrativeManager : MonoBehaviour
         if (dialogIndex < actualScene.Length)
         {
             actualDialog = actualScene[dialogIndex];
+            textImage.enabled = actualDialog.GetDialog() == null || actualDialog.GetDialog() == "" ? false : true;
+            character.enabled = actualDialog.Character == null ? false : true;
+            background.enabled = actualDialog.Background == null ? false : true;
             ShowDialog();
             dialogIndex++;
         }
@@ -77,9 +79,9 @@ public class NarrativeManager : MonoBehaviour
 
     void ShowDialog()
     {
-        /*textImage.sprite = actualDialog?.TextImage;
-        background.sprite = actualDialog?.Background;
-        character.sprite = actualDialog?.Character;*/
+        if (textImage.enabled == true) { textImage.sprite = actualDialog?.TextImage; }
+        if (character.enabled == true) { character.sprite = actualDialog?.Character; }
+        if (background.enabled == true) { background.sprite = actualDialog?.Background; }
         characterName.text = actualDialog.GetName();
 
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);

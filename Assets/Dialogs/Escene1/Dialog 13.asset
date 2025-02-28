@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7fa6bf4f29f27540b0db035cea40c48, type: 3}
   m_Name: Dialog 13
   m_EditorClassIdentifier: 
-  Background: {fileID: 0}
+  Background: {fileID: 21300000, guid: 9d6e756a56ef7b2448067872a7618f54, type: 3}
   Character: {fileID: 0}
   TextImage: {fileID: 0}
   Name: Rin
