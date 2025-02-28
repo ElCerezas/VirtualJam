@@ -19,3 +19,5 @@ MonoBehaviour:
   Dialog: ' muy....bien, pero cuando acabo la partida vuelvo a tierra y comienzan
     los problemas.'
   writtingSpeed: 0.1
+  audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
+  loopAudio: 1

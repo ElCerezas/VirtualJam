@@ -10,6 +10,8 @@ public class DialogScriptableObj : ScriptableObject
     [SerializeField] string Dialog;
 
     public float writtingSpeed = 0.5f;
+    public AudioClip audio;
+    public bool loopAudio = true;
     
     public string GetDialog()
     {

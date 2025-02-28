@@ -19,3 +19,5 @@ MonoBehaviour:
   Dialog: Dividiremos el problema en 3 sesiones y quiero que vengas con una actitud
     positiva y con una mente abierta.
   writtingSpeed: 0.1
+  audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
+  loopAudio: 1

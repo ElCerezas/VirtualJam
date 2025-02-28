@@ -82,6 +82,8 @@ public class NarrativeManager : MonoBehaviour
         if (textImage.enabled == true) { textImage.sprite = actualDialog?.TextImage; }
         if (character.enabled == true) { character.sprite = actualDialog?.Character; }
         if (background.enabled == true) { background.sprite = actualDialog?.Background; }
+        typingSound.clip = actualDialog.audio;
+        typingSound.loop = actualDialog.loopAudio;
         characterName.text = actualDialog.GetName();
 
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);

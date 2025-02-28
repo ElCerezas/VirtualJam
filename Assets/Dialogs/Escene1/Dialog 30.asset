@@ -19,3 +19,5 @@ MonoBehaviour:
   Dialog: "Al caso, creo que podr\xEDamos llegar a una soluci\xF3n para este problema
     que tienes en unas sesiones pautadas. "
   writtingSpeed: 0.1
+  audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
+  loopAudio: 1

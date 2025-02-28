@@ -18,3 +18,5 @@ MonoBehaviour:
   Name: "Psic\xF3loga"
   Dialog: "Mhm y dime,\n\xBFC\xF3mo te sientes? \xBFQu\xE9 sientes al jugar?"
   writtingSpeed: 0.1
+  audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
+  loopAudio: 1

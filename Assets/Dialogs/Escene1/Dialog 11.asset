@@ -18,3 +18,5 @@ MonoBehaviour:
   Name: "Psic\xF3loga"
   Dialog: "Interesante, cu\xE9ntame m\xE1s."
   writtingSpeed: 0.1
+  audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
+  loopAudio: 1

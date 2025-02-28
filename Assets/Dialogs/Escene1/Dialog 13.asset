@@ -19,3 +19,5 @@ MonoBehaviour:
   Dialog: "Aparte me est\xE1 dejando mal de la vista y tengo la columna s\xFAper
     arqueada desde que juego."
   writtingSpeed: 0.1
+  audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
+  loopAudio: 1
