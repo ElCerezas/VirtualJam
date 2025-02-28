@@ -15,9 +15,9 @@ MonoBehaviour:
   Background: {fileID: 0}
   Character: {fileID: 0}
   TextImage: {fileID: 0}
-  Name: "Psic\xF3loga"
-  Dialog: Ahora quiero que te transportes a tu mayor temor que es el virtual boy
-    y quiero que intentes profundizar en ello de una manera interna.
+  Name: 
+  Dialog: 
   writtingSpeed: 0.15
   audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
   loopAudio: 1
+  fadeOut: 1

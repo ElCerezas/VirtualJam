@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialog 10
   m_EditorClassIdentifier: 
   Background: {fileID: 0}
-  Character: {fileID: 0}
+  Character: {fileID: 562943768, guid: beac1089196ec7346bd32ff584e76253, type: 3}
   TextImage: {fileID: 0}
   Name: Rin
   Dialog: "\xA1Pues tengo una adicci\xF3n!"

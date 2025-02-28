@@ -12,6 +12,7 @@ public class DialogScriptableObj : ScriptableObject
     public float writtingSpeed = 0.5f;
     public AudioClip audio;
     public bool loopAudio = true;
+    public bool fadeOut;
     
     public string GetDialog()
     {

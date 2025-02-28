@@ -25,7 +25,7 @@ public class GifManager : MonoBehaviour
         {
             elapsedTime = 0f;
             i++;
-            i = i > frames.Length ? 0 : i;
+            i = i >= frames.Length ? 0 : i;
             img.sprite = frames[i];
         }
         if (NarrativeManager.chapterIndex > maxScene || NarrativeManager.dialogIndex > maxDialog)
