@@ -106,7 +106,7 @@ public class PlayerHandController : MonoBehaviour
         {
             CancelHit();
             Debug.Log("Golpe impactado en el enemigo.");
-            if (isLeftHand) { anim.SetTrigger("HitedLeft"); } else { anim.SetTrigger("HitedRight"); }
+            if (isLeftHand) { anim.SetTrigger("HittedLeft"); } else { anim.SetTrigger("HitedRight"); }
             boxerUIController.OnHit(false, false);
         }
     }
