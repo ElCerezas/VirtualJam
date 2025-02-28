@@ -8,6 +8,11 @@ public class BoxerUIController : MonoBehaviour
     [SerializeField] AudioSource PlayerHit, EnemyHit, Blocked;
 
     [SerializeField] int damage;
+    BoxingDamageManager FXManager;
+    private void Awake()
+    {
+        FXManager = GetComponent<BoxingDamageManager>();
+    }
     public void OnHit(bool blocked, bool isPlayerHit)
     {
         if (!blocked)
@@ -17,6 +22,7 @@ public class BoxerUIController : MonoBehaviour
             {
                 playerStats.health -= damage;
                 playerLifebar.value = playerStats.health;
+                FXManager.OnDamageRecived();
                 PlayerHit.Play();
             }
             else
@@ -31,6 +37,10 @@ public class BoxerUIController : MonoBehaviour
             if(!Blocked.isPlaying)
             {
                 Blocked.Play();
+            }
+            if (isPlayerHit)
+            {
+                FXManager.OnJustShake(0.1f, 0.1f);
             }
         }
 
