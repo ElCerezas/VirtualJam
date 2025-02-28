@@ -10,12 +10,12 @@ public class BoxingDamageManager : MonoBehaviour
 
     public void OnDamageRecived()
     {
-        StartCoroutine(ShakeCamera(0.2f, 0.4f));
+        StartCoroutine(ShakeCamera(0.3f, 0.5f));
         StartCoroutine(FadeInOut());
     }
     public void OnJustShake(float time, float force)
     {
-        ShakeCamera(time, force);
+        StartCoroutine(ShakeCamera(time, force));
     }
 
     private IEnumerator ShakeCamera(float shaky, float shakyStrengh)

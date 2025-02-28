@@ -42,12 +42,10 @@ public class EnemyHandController : MonoBehaviour
 
         if (handToCheck.handState == HandStateEnum.Blocking)
         {
-            Debug.Log("¡El jugador ha bloqueado el golpe!");
             boxerUIController.OnHit(true, true);
         }
         else
         {
-            Debug.Log("¡Golpe exitoso al jugador!");
             boxerUIController.OnHit(false, true);
         }
 

@@ -29,6 +29,7 @@ public class BoxerUIController : MonoBehaviour
             {
                 enemyStats.health -= damage;
                 enemyLifebar.value = enemyStats.health;
+                FXManager.OnJustShake(0.2f, 0.4f);
                 EnemyHit.Play();
             }
         }
@@ -38,10 +39,8 @@ public class BoxerUIController : MonoBehaviour
             {
                 Blocked.Play();
             }
-            if (isPlayerHit)
-            {
-                FXManager.OnJustShake(0.1f, 0.1f);
-            }
+            Debug.Log("Block Shake");
+            FXManager.OnJustShake(0.2f, 0.2f);
         }
 
         if (playerStats.health < 0)
