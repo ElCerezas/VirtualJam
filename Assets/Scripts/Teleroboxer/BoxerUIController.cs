@@ -43,11 +43,11 @@ public class BoxerUIController : MonoBehaviour
             FXManager.OnJustShake(0.2f, 0.2f);
         }
 
-        if (playerStats.health < 0)
+        if (playerStats.health <= 0)
         {
             GameManager.GameWin();
         }
-        if (enemyStats.health < 0)
+        if (enemyStats.health <= 0)
         {
             GameManager.GameLose();
         }

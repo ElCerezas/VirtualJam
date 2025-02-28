@@ -4,26 +4,27 @@ using UnityEngine;
 public class EnemyBoxerController : MonoBehaviour
 {
     private EnemyHandController leftHand, rightHand;
-    [SerializeField] private float actionCooldown = 2.0f; // Tiempo entre acciones
+    [SerializeField] private float actionCooldown = 2.0f; // Tiempo base entre acciones
 
     private void Start()
     {
         leftHand = GetComponent<BoxerStats>().leftHand.GetComponent<EnemyHandController>();
         rightHand = GetComponent<BoxerStats>().rightHand.GetComponent<EnemyHandController>();
 
-        StartCoroutine(EnemyAI());
+        //Cada mano tiene su propia IA independiente
+        StartCoroutine(EnemyAI(leftHand));
+        StartCoroutine(EnemyAI(rightHand));
     }
 
-    private IEnumerator EnemyAI()
+    private IEnumerator EnemyAI(EnemyHandController hand)
     {
         while (true)
         {
-            yield return new WaitForSeconds(actionCooldown);
-            int actionLeft = Random.Range(0, 2);  // Acción de la mano izquierda
-            int actionRight = Random.Range(0, 2); // Acción de la mano derecha
+            //Tiempo de espera independiente para cada mano
+            yield return new WaitForSeconds(Random.Range(actionCooldown - 0.2f, actionCooldown + 0.2f));
 
-            ExecuteAction(leftHand, actionLeft);
-            ExecuteAction(rightHand, actionRight);
+            int action = Random.Range(0, 2);  // Acción aleatoria (0 = golpe, 1 = bloqueo)
+            ExecuteAction(hand, action);
         }
     }
 
@@ -38,7 +39,7 @@ public class EnemyBoxerController : MonoBehaviour
                 hand.StartBlock();
                 break;
             default:
-                // No hacer nada (reposo)
+                // No hacer nada
                 break;
         }
     }
