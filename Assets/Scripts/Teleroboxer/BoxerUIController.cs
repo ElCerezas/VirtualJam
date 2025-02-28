@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class BoxerUIController : MonoBehaviour
 
     [SerializeField] int damage;
     BoxingDamageManager FXManager;
+    
     private void Awake()
     {
         FXManager = GetComponent<BoxingDamageManager>();

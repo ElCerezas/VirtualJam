@@ -20,6 +20,7 @@ public class PlayerHandController : MonoBehaviour
     [SerializeField] private float blockXOffset = 0.2f; // Desplazamiento en X al bloquear
     [SerializeField] private float blockScaleIncrease = 0.3f; // Cuánto se agranda al bloquear
 
+    [SerializeField] Animator anim;
     BoxerUIController boxerUIController;
     private Coroutine hitCoroutine;
     private bool isMoving = false;
@@ -99,12 +100,13 @@ public class PlayerHandController : MonoBehaviour
                 CancelHit();
                 Debug.Log("Golpe bloqueado por el enemigo.");
                 boxerUIController.OnHit(true, false);
-            }
+                }
         }
         else if (collision.CompareTag("Enemy"))
         {
             CancelHit();
             Debug.Log("Golpe impactado en el enemigo.");
+            if (isLeftHand) { anim.SetTrigger("HitedLeft"); } else { anim.SetTrigger("HitedRight"); }
             boxerUIController.OnHit(false, false);
         }
     }

@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 8239ab15590c76e43918321ba83d920d
+guid: d0a5898202546b3429af76e47ce3cc49
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5350007238205115906
-    second: "Sin t\xEDtulo-1_0"
+      213: -3837188001172079915
+    second: spritesheet robot_0
   - first:
-      213: 6486329856321769463
-    second: "Sin t\xEDtulo-1_1"
+      213: -7752942332110474657
+    second: spritesheet robot_1
   - first:
-      213: -30594090272471809
-    second: "Sin t\xEDtulo-1_2"
+      213: -8182052979239912400
+    second: spritesheet robot_2
+  - first:
+      213: 5940853465801733310
+    second: spritesheet robot_3
+  - first:
+      213: -7112921602175935521
+    second: spritesheet robot_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,67 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Sin t\xEDtulo-1_0"
+      name: spritesheet robot_0
       rect:
         serializedVersion: 2
         x: 24
         y: 218
         width: 57
         height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 457851d35d0d6a34aad816776b49a79f
-      internalID: -1519388611
+      spriteID: 5da3fbdd7d19fbac0800000000000000
+      internalID: -3837188001172079915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Sin t\xEDtulo-1_1"
+      name: spritesheet robot_1
       rect:
         serializedVersion: 2
         x: 122
         y: 219
         width: 61
         height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a364af913aace1848a6caca1d80aae45
-      internalID: 1342730940
+      spriteID: f52777a9604086490800000000000000
+      internalID: -7752942332110474657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Sin t\xEDtulo-1_2"
+      name: spritesheet robot_2
       rect:
         serializedVersion: 2
         x: 222
         y: 219
         width: 61
         height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 416d119abac2a614cb38477de9c0748c
-      internalID: -88559539
+      spriteID: 03c7afe6a22837e80800000000000000
+      internalID: -8182052979239912400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet robot_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 118
+        width: 57
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4b2cb40c6227250800000000000000
+      internalID: 5940853465801733310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet robot_4
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 118
+        width: 57
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdbd91b1d73d94d90800000000000000
+      internalID: -7112921602175935521
       vertices: []
       indices: 
       edges: []
@@ -175,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 591a3719d922bc84a82ae4f4537a9165
+    spriteID: aed3d71c8ec33164e9926aff5a379dac
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Sin t\xEDtulo-1_0": -1519388611
-      "Sin t\xEDtulo-1_1": 1342730940
-      "Sin t\xEDtulo-1_2": -88559539
+      spritesheet robot_0: -3837188001172079915
+      spritesheet robot_1: -7752942332110474657
+      spritesheet robot_2: -8182052979239912400
+      spritesheet robot_3: 5940853465801733310
+      spritesheet robot_4: -7112921602175935521
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
