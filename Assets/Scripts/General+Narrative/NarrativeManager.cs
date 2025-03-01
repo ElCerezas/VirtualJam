@@ -26,9 +26,9 @@ public class NarrativeManager : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        Debug.Log("GettingInfo");
 
         chapterIndex = PlayerPrefs.GetInt("chapterIndex");
-        if (PlayerPrefs.GetInt("dialogIndex") != 0) { dialogIndex = PlayerPrefs.GetInt("dialogIndex") - 2; } else { dialogIndex = 0; }
         switch (chapterIndex)
         {
             case 0: actualScene = Chapter1; break;
@@ -36,6 +36,7 @@ public class NarrativeManager : MonoBehaviour
             case 2: actualScene = Chapter3; break;
             case 3: actualScene = Chapter4; break;
         }
+        if (PlayerPrefs.GetInt("dialogIndex") != 0) {dialogIndex = PlayerPrefs.GetInt("dialogIndex") - 2; } else { dialogIndex = 0; }
         Debug.LogWarning($"Dialog: {dialogIndex} chapter: {chapterIndex}");
         OnNextDialog();
     }
@@ -100,13 +101,11 @@ public class NarrativeManager : MonoBehaviour
         }
         else
         {
-            dialogIndex = 0;
-            chapterIndex++;
             switch (chapterIndex)
             {
-                case 1: gameManager.NarrativeGoToGame(2); break;
-                case 2: gameManager.NarrativeGoToGame(3); break;
-                case 3: gameManager.NarrativeGoToGame(4); break;
+                case 0: gameManager.NarrativeGoToGame(2); break; //Boxer
+                case 1: gameManager.NarrativeGoToGame(3); break; //Tenis
+                case 2: gameManager.NarrativeGoToGame(4); break; //Wario
                 default:
                     gameManager.NarrativeGoToGame(5);
                     break;

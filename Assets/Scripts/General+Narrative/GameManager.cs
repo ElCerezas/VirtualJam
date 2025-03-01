@@ -37,28 +37,20 @@ public class GameManager : MonoBehaviour
     }
     public static void GameWin()
     {
-        PlayerPrefs.SetInt("chapterIndex", PlayerPrefs.GetInt("chapterIndex")+1);
+        int prevChapter = PlayerPrefs.GetInt("chapterIndex");
+        PlayerPrefs.SetInt("chapterIndex", prevChapter + 1);
         PlayerPrefs.SetInt("dialogIndex", 0);
         SceneManager.LoadScene("Narrative");
     }
     public static void GameLose()
     {
-        PlayerPrefs.SetInt("dialogIndex", PlayerPrefs.GetInt("dialogIndex"));
+        int prevDialog = PlayerPrefs.GetInt("dialogIndex");
+        Debug.LogWarning($"Prev dialog: {PlayerPrefs.GetInt("dialogIndex")} PrevChapter: {PlayerPrefs.GetInt("chapterIndex")}");
+        PlayerPrefs.SetInt("dialogIndex", prevDialog);
         SceneManager.LoadScene("Narrative");
     }
     public int GetSceneIndex()
     {
         return SceneManager.GetActiveScene().buildIndex;
-    }
-
-    private void OnDrawGizmos()
-    {
-        string value = PlayerPrefs.GetInt("chapterIndex", 0).ToString(); // Cambia a GetFloat o GetString si es necesario
-        GUIStyle style = new GUIStyle();
-        style.normal.textColor = Color.blue;
-        style.fontSize = (int)(1 * 10);
-
-        Vector3 position = transform.position + Vector3.up * 1.5f; // Ajusta la posición del texto
-        UnityEditor.Handles.Label(position, $"v: {value}", style);
     }
 }
