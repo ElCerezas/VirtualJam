@@ -3,6 +3,7 @@ using UnityEngine.Tilemaps;
 
 public enum RockType
 {
+    Ground,
     Normal,
     Broken,
     Lucky,

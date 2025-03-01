@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - PowerJump
-  - Ground
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -13,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
-  - PowerJump
+  - 
+  - 
   - Background
   - Foreground
   - 

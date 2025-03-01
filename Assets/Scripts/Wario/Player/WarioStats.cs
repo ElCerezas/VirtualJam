@@ -4,6 +4,7 @@ using UnityEngine;
 public class WarioStats : MonoBehaviour
 {
     public static WarioStats Instance;
+    private WarioStateManager stateManager;
 
     public static Action<int> OnUpdateHearts;
     public static Action<int> OnUpdateCoins;
@@ -17,6 +18,7 @@ public class WarioStats : MonoBehaviour
 
     public Transform transform;
     public Vector3 lastPos;
+
     private void OnEnable()
     {
         OnUpdateHearts += UpdateHearts;
@@ -41,11 +43,12 @@ public class WarioStats : MonoBehaviour
         OnHeartsChanged?.Invoke(Hearts);
         OnCoinsChanged?.Invoke(Coins);
         transform = GetComponent<Transform>();
+        stateManager = WarioStateManager.Instance;
     }
 
     private void Update()
     {
-        if(WarioStateManager.Instance.IsGrounded)
+        if(stateManager.IsGrounded)
         {
             lastPos = transform.position;
         }

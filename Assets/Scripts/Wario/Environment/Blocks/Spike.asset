@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163c2d5c0fbf5044f908832e27f40300, type: 3}
   m_Name: Spike
   m_EditorClassIdentifier: 
-  tileSprite: {fileID: 0}
-  rockType: 0
+  tileSprite: {fileID: 874148080, guid: 43de9f6fba54d704d9ab1d21e1bd104f, type: 3}
+  rockType: 6
   itemsDropped: []
   BrokenTile: {fileID: 0}

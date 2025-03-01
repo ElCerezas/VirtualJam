@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 163c2d5c0fbf5044f908832e27f40300, type: 3}
-  m_Name: NormalRock
+  m_Name: Ground
   m_EditorClassIdentifier: 
   tileSprite: {fileID: -1489391863, guid: 43de9f6fba54d704d9ab1d21e1bd104f, type: 3}
   rockType: 0
   itemsDropped: []
-  BrokenTile: {fileID: 11400000, guid: 39edbfab21d3c4840a81ec99f519686b, type: 2}
+  BrokenTile: {fileID: 0}

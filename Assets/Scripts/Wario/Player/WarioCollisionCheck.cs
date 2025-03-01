@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class WarioGroundCheck : MonoBehaviour
+public class WarioCollisionCheck : MonoBehaviour
 {
     [Header("Tiles & Tilemaps")]
     public Tilemap ForegroundTilemap;
@@ -34,7 +34,6 @@ public class WarioGroundCheck : MonoBehaviour
         TileBase roofTile = ActualTilemap.GetTile(roofPosition);
         stateManager.IsGrounded = false;
         stateManager.IsOnPowerJump = (groundTile == powerJumpTile);
-        stateManager.IsJumping = (!stateManager.IsGrounded && !stateManager.IsOnPowerJump);
         if (groundTile is RockTile groundRock)
         {
             if (groundRock.rockType == RockType.Spike)
@@ -46,6 +45,8 @@ public class WarioGroundCheck : MonoBehaviour
                 stateManager.IsGrounded = true;
             }
         }
+        stateManager.IsJumping = (!stateManager.IsGrounded && !stateManager.IsOnPowerJump);
+
 
         if (roofTile is RockTile rockTile)
         {
