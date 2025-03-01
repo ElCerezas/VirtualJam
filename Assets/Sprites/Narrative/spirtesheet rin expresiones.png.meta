@@ -1,0 +1,566 @@
+fileFormatVersion: 2
+guid: beac1089196ec7346bd32ff584e76253
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2423609695233132991
+    second: spirtesheet rin expresiones_0
+  - first:
+      213: -4077575997585073737
+    second: spirtesheet rin expresiones_1
+  - first:
+      213: 2452390992829077172
+    second: spirtesheet rin expresiones_2
+  - first:
+      213: -2868451672282390873
+    second: spirtesheet rin expresiones_3
+  - first:
+      213: -3724093433609535914
+    second: spirtesheet rin expresiones_4
+  - first:
+      213: 6277432321022285768
+    second: spirtesheet rin expresiones_5
+  - first:
+      213: 4070574278177988176
+    second: spirtesheet rin expresiones_6
+  - first:
+      213: 4659828373722369130
+    second: spirtesheet rin expresiones_7
+  - first:
+      213: -4717810356156124737
+    second: spirtesheet rin expresiones_8
+  - first:
+      213: 1845168365128932373
+    second: spirtesheet rin expresiones_9
+  - first:
+      213: -5375352322854136797
+    second: spirtesheet rin expresiones_10
+  - first:
+      213: 3254570325311311776
+    second: spirtesheet rin expresiones_11
+  - first:
+      213: 7382544447011373807
+    second: spirtesheet rin expresiones_12
+  - first:
+      213: -7423221248398409925
+    second: spirtesheet rin expresiones_13
+  - first:
+      213: 3127772758063434892
+    second: spirtesheet rin expresiones_14
+  - first:
+      213: -6502637869252996616
+    second: spirtesheet rin expresiones_15
+  - first:
+      213: -4072731794563602978
+    second: spirtesheet rin expresiones_16
+  - first:
+      213: -1527286899904914201
+    second: spirtesheet rin expresiones_17
+  - first:
+      213: 7606914395681674150
+    second: spirtesheet rin expresiones_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Sue\xF1o"
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 6147
+        width: 1245
+        height: 1716
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f0dd4b0bcdd0c4e9486efaa682d7f2
+      internalID: -1636638752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feliz_SinOjeras
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 6147
+        width: 1245
+        height: 1689
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a19317a76f303498022347d97f9339
+      internalID: -462467461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decidida
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 6147
+        width: 1249
+        height: 1718
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a046f820abd1e7a41a41665fe3554545
+      internalID: 126113435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feliz_Ojeras
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 6147
+        width: 1249
+        height: 1719
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81484bbb73aee6946bda51fad41f5074
+      internalID: -670477380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decepcionada
+      rect:
+        serializedVersion: 2
+        x: 7898
+        y: 6147
+        width: 1249
+        height: 1711
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ca4ec6d5081014eb9ffb884c1eff4e
+      internalID: 1345606757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CansadaJefe
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 4086
+        width: 1333
+        height: 1714
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2fcbece24f464243bccdc20c0fa26ff
+      internalID: 1093099006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Confundida
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 4086
+        width: 1246
+        height: 1728
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b81b615298194b45abefd69dae446b1
+      internalID: -371862122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BocaAbierta
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 4086
+        width: 1248
+        height: 1655
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99379ff53eb95ef4ea508d5553bb2102
+      internalID: 2011626997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Curiosa
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 4095
+        width: 1249
+        height: 1719
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912ec48199234c248bea9c3dca33a2e3
+      internalID: -63418712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hopeful
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 2054
+        width: 1245
+        height: 1685
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41dc01ccf2af6ad45a821cce879a4b42
+      internalID: -1919890694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IncomodaOjeras
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 2059
+        width: 1245
+        height: 1694
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c4fd684547f4943991bae6485cf7d1
+      internalID: 822528255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiTesoro
+      rect:
+        serializedVersion: 2
+        x: 4144
+        y: 2059
+        width: 1151
+        height: 1772
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e094aaad7767e4458db5cc719bfcb25
+      internalID: -27968832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Agobiada
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 2054
+        width: 1250
+        height: 1724
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae43791d207e23b40ade22148d5b91e7
+      internalID: 562943768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Restful
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 125
+        width: 1250
+        height: 1727
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4873e613f30afa5409d1d802c1e5f114
+      internalID: 88161551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sobresaltada
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 164
+        width: 1245
+        height: 1688
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680f98e17c683b14a89652140af70bc6
+      internalID: 1496063059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sorprendida
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 164
+        width: 1248
+        height: 1724
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3502b5b9e03a14c8878bcea2ae30f4
+      internalID: -49764169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuperSorprendida
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 213
+        width: 1250
+        height: 1675
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7a873f38efa134b8e8b33f1aa94762
+      internalID: -478808072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5ca7c8bede0d51c4ebeb75f24f618399
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Agobiada: 562943768
+      BocaAbierta: 2011626997
+      CansadaJefe: 1093099006
+      Confundida: -371862122
+      Curiosa: -63418712
+      Decepcionada: 1345606757
+      Decidida: 126113435
+      Feliz_Ojeras: -670477380
+      Feliz_SinOjeras: -462467461
+      Hopeful: -1919890694
+      IncomodaOjeras: 822528255
+      MiTesoro: -27968832
+      Restful: 88161551
+      Sobresaltada: 1496063059
+      Sorprendida: -49764169
+      "Sue\xF1o": -1636638752
+      SuperSorprendida: -478808072
+      spirtesheet rin expresiones_10: 81872925
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

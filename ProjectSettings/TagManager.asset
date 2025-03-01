@@ -6,17 +6,25 @@ TagManager:
   tags:
   - PowerJump
   - Ground
+  - Enemy
+  - PlayerRightHand
+  - EnemyHand
+  - PlayerLeftHand
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Ground
   - PowerJump
   - Background
   - Foreground
+  - Enemy
+  - 
+  - 
+  - 
   - 
   - 
   - 
