@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WarrioBlocks0
+      name: SolidRock
       rect:
         serializedVersion: 2
         x: 0
@@ -122,7 +122,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarrioBlocks1
+      name: LuckyBlock
       rect:
         serializedVersion: 2
         x: 32
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarrioBlocks2
+      name: Rock
       rect:
         serializedVersion: 2
         x: 64
@@ -166,7 +166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarrioBlocks3
+      name: BrokenRock
       rect:
         serializedVersion: 2
         x: 96
@@ -188,7 +188,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarrioBlocks4
+      name: FireRock
       rect:
         serializedVersion: 2
         x: 128
@@ -210,7 +210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarrioBlocks5
+      name: PowerJump0
       rect:
         serializedVersion: 2
         x: 160
@@ -232,7 +232,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarrioBlocks6
+      name: PowerJump1
       rect:
         serializedVersion: 2
         x: 192
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarrioBlocks7
+      name: PowerJump2
       rect:
         serializedVersion: 2
         x: 224
@@ -276,7 +276,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarrioBlocks8
+      name: Spike
       rect:
         serializedVersion: 2
         x: 256
@@ -298,13 +298,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarrioBlocks9
+      name: GiantRock0
       rect:
         serializedVersion: 2
         x: 288
-        y: 0
-        width: 64
-        height: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,6 +315,72 @@ TextureImporter:
       bones: []
       spriteID: 4081b6aa8ed4b934c8910f358af9aba4
       internalID: 1012741768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantRock1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f527c132560332f439ed616835bcdb97
+      internalID: 1257444506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantRock2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1a848195483154f8eb316515fd5711
+      internalID: 179953795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GiantRock3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed73f1d9fa875924996070706926552d
+      internalID: -1185836854
       vertices: []
       indices: 
       edges: []
@@ -333,16 +399,30 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WarrioBlocks0: 4580548728316976349
-      WarrioBlocks1: 1468463033
-      WarrioBlocks2: -1489391863
-      WarrioBlocks3: -277560549
-      WarrioBlocks4: 328012689
-      WarrioBlocks5: -36102470
-      WarrioBlocks6: -1457009604
-      WarrioBlocks7: -77674698
-      WarrioBlocks8: 874148080
-      WarrioBlocks9: 1012741768
+      BrokenRock: -277560549
+      FireRock: 328012689
+      GiantRock0: 1012741768
+      GiantRock1: 1257444506
+      GiantRock2: 179953795
+      GiantRock3: -1185836854
+      LuckyBlock: 1468463033
+      PowerJump0: -36102470
+      PowerJump1: -1457009604
+      PowerJump2: -77674698
+      Rock: -1489391863
+      SmallBrokenRock: -392151332
+      SmallFireRock: -14293988
+      SmallGiantRock: 1470378447
+      SmallLuckyBlock: -788790759
+      SmallPowerJump0: 1509976775
+      SmallPowerJump1: 800847964
+      SmallPowerJump2: 133665968
+      SmallRock: 555606605
+      SmallSolidRock: -142865078
+      SmallSpike: -1038239017
+      SolidRock: 4580548728316976349
+      Spike: 874148080
+      bSolidRock: 4580548728316976349
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
