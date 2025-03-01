@@ -51,12 +51,15 @@ public class BGMusicLogic : MonoBehaviour
             {
                 case 2: //Boxer
                     bgMusic.clip = musicas[1];
+                    bgMusic.Play();
                     break;
                 case 3:
                     bgMusic.clip = musicas[2];
+                    bgMusic.Play();
                     break;
                 case 4:
                     bgMusic.clip = musicas[3];
+                    bgMusic.Play();
                     break;
                 default:
                     if (bgMusic.clip == musicas[0])
@@ -64,6 +67,7 @@ public class BGMusicLogic : MonoBehaviour
                         break;
                     }
                     bgMusic.clip = musicas[0];
+                    bgMusic.Play();
                     break;
             }
         }

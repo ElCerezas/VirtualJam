@@ -18,6 +18,7 @@ MonoBehaviour:
   Name: "Psic\xF3loga"
   Dialog: "*Silencio* \n(le mira con los ojos entrecerrados intentando averiguar
     qu\xE9 le pasa)"
-  writtingSpeed: 0.5
+  writtingSpeed: 0.1
   audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
   loopAudio: 1
+  fadeOut: 0

@@ -834,7 +834,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f756b7c1a62894bb5af5f881ecc1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicas: []
+  musicas:
+  - {fileID: 8300000, guid: 087b4cb14b7b285479cecc70cd635348, type: 3}
+  - {fileID: 8300000, guid: 011021fd301c7e24384713b0bd74da47, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1727051994
 MonoBehaviour:
   m_ObjectHideFlags: 0
