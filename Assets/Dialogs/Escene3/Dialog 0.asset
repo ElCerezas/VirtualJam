@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7fa6bf4f29f27540b0db035cea40c48, type: 3}
-  m_Name: Dialog 10
+  m_Name: Dialog 0
   m_EditorClassIdentifier: 
-  Background: {fileID: 21300000, guid: b8d6709e49730974b9affb51cc53c4f1, type: 3}
-  Character: {fileID: 821392553, guid: 8028421d8d8fcb045ad74cdd9101b4bc, type: 3}
+  Background: {fileID: 21300000, guid: 395d2fdcfed782d488634508355a3829, type: 3}
+  Character: {fileID: 0}
   TextImage: {fileID: 0}
-  Name: "Psic\xF3loga"
-  Dialog: Si te parece, empezemos
-  writtingSpeed: 0.1
+  Name: 
+  Dialog: 
+  writtingSpeed: 0.5
   audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
   loopAudio: 1
   fadeOut: 0

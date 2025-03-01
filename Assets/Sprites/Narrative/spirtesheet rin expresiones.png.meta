@@ -154,7 +154,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spirtesheet rin expresiones_0
+      name: "Sue\xF1o"
       rect:
         serializedVersion: 2
         x: 203
@@ -220,7 +220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Contenta
+      name: Feliz_Ojeras
       rect:
         serializedVersion: 2
         x: 5974
@@ -545,10 +545,10 @@ TextureImporter:
       BocaAbierta: 2011626997
       CansadaJefe: 1093099006
       Confundida: -371862122
-      Contenta: -670477380
       Curiosa: -63418712
       Decepcionada: 1345606757
       Decidida: 126113435
+      Feliz_Ojeras: -670477380
       Feliz_SinOjeras: -462467461
       Hopeful: -1919890694
       IncomodaOjeras: 822528255
@@ -556,8 +556,8 @@ TextureImporter:
       Restful: 88161551
       Sobresaltada: 1496063059
       Sorprendida: -49764169
+      "Sue\xF1o": -1636638752
       SuperSorprendida: -478808072
-      spirtesheet rin expresiones_0: -1636638752
       spirtesheet rin expresiones_10: 81872925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
