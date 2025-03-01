@@ -355,8 +355,26 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bb1f6f215410e71408d6230c866fd405, type: 2}
   - {fileID: 11400000, guid: 2e5f06dc2ec8217459ff6bca1ad74f1f, type: 2}
   - {fileID: 11400000, guid: b9a8184313241e1428542be76fd03e83, type: 2}
-  Chapter3: []
-  Chapter4: []
+  Chapter3:
+  - {fileID: 11400000, guid: eb61e400080718043b638bd868dd0e94, type: 2}
+  - {fileID: 11400000, guid: 90dcdec8fa8e221479b24a56363d1c74, type: 2}
+  - {fileID: 11400000, guid: 055d2271f3808144ba690a1a0ade79a2, type: 2}
+  - {fileID: 11400000, guid: e43b3028362c63541b968042b888feed, type: 2}
+  - {fileID: 11400000, guid: 721b72a93fbe7d9429de45acb38574f5, type: 2}
+  - {fileID: 11400000, guid: 0469ce7534946a04eb128f02795fcf1d, type: 2}
+  - {fileID: 11400000, guid: f071e0820020eca4a8c06b2a8ddab84f, type: 2}
+  - {fileID: 11400000, guid: 5b0834adc5a24c141886d56ecd47af31, type: 2}
+  - {fileID: 11400000, guid: e9f58e7c555fa524da93b6bd7f58b7bf, type: 2}
+  - {fileID: 11400000, guid: 6f830e386c8152241b464d51da661d3c, type: 2}
+  - {fileID: 11400000, guid: 13defa37ec982e344a2369bef7031221, type: 2}
+  - {fileID: 11400000, guid: b7f461f6ed32d0840a6c2e4edc320875, type: 2}
+  - {fileID: 11400000, guid: 19a6e8b928a11cb40ac29fd466ac634c, type: 2}
+  Chapter4:
+  - {fileID: 11400000, guid: 93707cfd90faed542b9f0474615dc4d6, type: 2}
+  - {fileID: 11400000, guid: c11811d791c9d5042ba092413c849a3a, type: 2}
+  - {fileID: 11400000, guid: a78fcf84a1f513c4cb6ca0a23537cc30, type: 2}
+  - {fileID: 11400000, guid: c984618517af7bf42a66081a1cbbe6ba, type: 2}
+  - {fileID: 11400000, guid: 9f5f5c404ee27fb4b92b7068d987f60e, type: 2}
   dialog: {fileID: 603158523}
   characterName: {fileID: 1766455491}
   background: {fileID: 162426436}
@@ -922,7 +940,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 16.899994, y: -133.45718}
+  m_AnchoredPosition: {x: 16.900024, y: -133.45718}
   m_SizeDelta: {x: -61.8661, y: 183.222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074130187
