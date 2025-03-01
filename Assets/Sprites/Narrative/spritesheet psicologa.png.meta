@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: 8028421d8d8fcb045ad74cdd9101b4bc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1667450747665209169
+    second: spritesheet psicologa_0
+  - first:
+      213: -428864067239556709
+    second: spritesheet psicologa_1
+  - first:
+      213: 2586948338473652091
+    second: spritesheet psicologa_2
+  - first:
+      213: 7189617803392339205
+    second: spritesheet psicologa_3
+  - first:
+      213: 3944489537921901799
+    second: spritesheet psicologa_4
+  - first:
+      213: -8850500725212656176
+    second: spritesheet psicologa_5
+  - first:
+      213: 2292902615965000193
+    second: spritesheet psicologa_6
+  - first:
+      213: 9113619009661976605
+    second: spritesheet psicologa_7
+  - first:
+      213: 875082396796065568
+    second: spritesheet psicologa_8
+  - first:
+      213: -2581932309148458079
+    second: spritesheet psicologa_9
+  - first:
+      213: 7554144749641629922
+    second: spritesheet psicologa_10
+  - first:
+      213: 1437903444099118647
+    second: spritesheet psicologa_11
+  - first:
+      213: 8906251928785120194
+    second: spritesheet psicologa_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enfin
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 2445
+        width: 726
+        height: 986
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60618aee7698c9a4eb28745436b51fc9
+      internalID: -1719126324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amable
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 2445
+        width: 724
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4a73b927c07484ca20e758f2bde2e3
+      internalID: 821392553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apuntando
+      rect:
+        serializedVersion: 2
+        x: 2185
+        y: 2446
+        width: 723
+        height: 986
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7522441fdfebcc14d917da33d886b5b6
+      internalID: 1506875562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Contenta
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1260
+        width: 725
+        height: 980
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418008e4e49caf140ad2e362b734e4a0
+      internalID: 636410753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ojiplatica
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1260
+        width: 724
+        height: 980
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e586172a9f2d2498eb9b5235b14793
+      internalID: -346877676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preocupada
+      rect:
+        serializedVersion: 2
+        x: 2185
+        y: 1260
+        width: 723
+        height: 980
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b75f48174b0fe04ca37334e8ef24c88
+      internalID: -1853093859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psicoanalizando
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 156
+        width: 796
+        height: 974
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3b08f979d166d4dafc9218cf69c168
+      internalID: -1660238800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TriunfoElMal
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 156
+        width: 744
+        height: 889
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7778525a7445e541b96e44fb6c2c58d
+      internalID: 1492906901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cf205f1d666b5d14cacb9b72f93f9060
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Amable: 821392553
+      Apuntando: 1506875562
+      Contenta: 636410753
+      Enfin: -1719126324
+      Ojiplatica: -346877676
+      Preocupada: -1853093859
+      Psicoanalizando: -1660238800
+      TriunfoElMal: 1492906901
+      spritesheet psicologa_3: -474746196
+      spritesheet psicologa_4: -819610444
+      spritesheet psicologa_5: -1105936858
+      spritesheet psicologa_9: -419909389
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

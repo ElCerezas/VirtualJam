@@ -3,18 +3,28 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - PowerJump
+  - Ground
+  - Enemy
+  - PlayerRightHand
+  - EnemyHand
+  - PlayerLeftHand
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
   - 
   - Background
   - Foreground
+  - Enemy
+  - 
+  - 
+  - 
   - 
   - 
   - 
