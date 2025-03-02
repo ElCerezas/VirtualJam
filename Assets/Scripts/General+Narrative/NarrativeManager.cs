@@ -40,7 +40,7 @@ public class NarrativeManager : MonoBehaviour
             case 2: actualScene = Chapter3; break;
             case 3: actualScene = Chapter4; break;
         }
-        if (PlayerPrefs.GetInt("dialogIndex") != 0) {dialogIndex = PlayerPrefs.GetInt("dialogIndex") - 2; } else { dialogIndex = 0; }
+        if (PlayerPrefs.GetInt("dialogIndex") != 0) {dialogIndex = PlayerPrefs.GetInt("dialogIndex") - 1; } else { dialogIndex = 0; }
         Debug.LogWarning($"Dialog: {dialogIndex} chapter: {chapterIndex}");
         OnNextDialog();
     }
