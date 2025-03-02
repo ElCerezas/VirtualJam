@@ -22,9 +22,11 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.GetInt("chapterIndex", 0);
         PlayerPrefs.GetInt("dialogIndex", 0);
     }
-    public void NextScene()
+    public void NewGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        PlayerPrefs.SetInt("chapterIndex", 0);
+        PlayerPrefs.SetInt("dialogIndex", 0);
+        SceneManager.LoadScene("Narrative");
     }
     public void NarrativeGoToGame(int scene)
     {
