@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wariocontroles_0: 5863269493258872220
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

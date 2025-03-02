@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TennisControls_0: -8893973199092567990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
