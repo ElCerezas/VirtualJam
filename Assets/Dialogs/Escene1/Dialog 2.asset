@@ -18,5 +18,5 @@ MonoBehaviour:
   Name: ???
   Dialog: "\xA1Pasa! \xA1Pasa!"
   writtingSpeed: 0.05
-  audio: {fileID: 8300000, guid: 3ab0700ccd0525a48ba7279c24eacf69, type: 3}
+  audio: {fileID: 0}
   fadeOut: 1

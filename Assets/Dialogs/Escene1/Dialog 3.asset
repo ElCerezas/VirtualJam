@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7fa6bf4f29f27540b0db035cea40c48, type: 3}
   m_Name: Dialog 3
   m_EditorClassIdentifier: 
-  Background: {fileID: 21300000, guid: 9d6e756a56ef7b2448067872a7618f54, type: 3}
-  Character: {fileID: 1093099006, guid: beac1089196ec7346bd32ff584e76253, type: 3}
+  Background: {fileID: 21300000, guid: b621e32f26c2cc34db21ed27905360d4, type: 3}
+  Character: {fileID: 0}
   TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
   Name: Rin
   Dialog: "Ya no hay vuelta atr\xE1s\u2026."
   writtingSpeed: 0.05
-  audio: {fileID: 0}
+  audio: {fileID: 8300000, guid: 3ab0700ccd0525a48ba7279c24eacf69, type: 3}
   fadeOut: 1
