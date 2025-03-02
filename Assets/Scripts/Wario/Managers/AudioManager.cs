@@ -5,8 +5,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance { get; private set; }
 
     [Header("Audio Sources")]
-    private AudioSource _backgroundMusic;
-    private AudioSource _soundEffects;
+    public AudioSource SoundEffects;
 
     [Header("Audio Clips")]
     public AudioClip CoinSound;
@@ -21,10 +20,7 @@ public class AudioManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            _backgroundMusic = new AudioSource();
-            _soundEffects = new AudioSource();
         }
-        
     }
 
     public void PlaySFX(string sfxName)
@@ -32,19 +28,18 @@ public class AudioManager : MonoBehaviour
         switch (sfxName)
         {
             case "Coin":
-                _soundEffects.PlayOneShot(Jump);
+                SoundEffects.PlayOneShot(CoinSound);
                 break;
             case "BreakBlock":
-                _soundEffects.PlayOneShot(Jump);
+                SoundEffects.PlayOneShot(BreakBlock);
                 break;
-            case "EnemyDamage":
-                _soundEffects.PlayOneShot(Jump);
+            case "Damage":
+                SoundEffects.PlayOneShot(EnemyDamage);
                 break;
             case "Jump":
-                _soundEffects.PlayOneShot(Jump);
+                SoundEffects.PlayOneShot(Jump);
                 break;
             default:
-                _soundEffects.PlayOneShot(Jump);
                 break;
         }
     }

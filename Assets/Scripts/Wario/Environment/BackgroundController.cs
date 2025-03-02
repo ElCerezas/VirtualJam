@@ -8,8 +8,8 @@ public class BackgroundController : MonoBehaviour
     public Transform FirstPlane;
     public Transform SecondPlane;
 
-    public List<Tilemap> FirstPlanes;
-    public List<Tilemap> SecondPlanes;
+    public Transform Player;
+    public Vector3 SecondInitialPos;
 
     public float VelocityFirstPlane = 1f;
     public float VelocitySecondPlane;
@@ -17,27 +17,42 @@ public class BackgroundController : MonoBehaviour
     [SerializeField]
     private WarioMovement playerMovement;
 
+    private void OnEnable()
+    {
+        WarioStats.OnPlayerKilled += ResetPosition;
+    }
+
+    private void OnDisable()
+    {
+        WarioStats.OnPlayerKilled -= ResetPosition;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         VelocitySecondPlane = VelocityFirstPlane * 2;
-        FirstPlanes = new List<Tilemap>(FirstPlane.GetComponentsInChildren<Tilemap>());
-        SecondPlanes = new List<Tilemap>(SecondPlane.GetComponentsInChildren<Tilemap>());
+        SecondInitialPos = SecondPlane.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //MoveTilemap(FirstPlanes, VelocityFirstPlane);
-        MoveTilemap(SecondPlanes, VelocitySecondPlane);
+        if (Player.transform.position.x >= 50)
+        {
+            MoveTilemap(SecondPlane, VelocitySecondPlane);
+        }
+        //MoveTilemap(FirstPlane, VelocityFirstPlane);
+        
     }
 
-    private void MoveTilemap(List<Tilemap> tilemaps, float velocity)
+    private void MoveTilemap(Transform tilemap, float velocity)
     {
-        foreach (var tilemap in tilemaps)
-        {
-            Vector3 move = new Vector3(-velocity * Time.deltaTime * playerMovement.xVelocity, 0, 0);
-            tilemap.transform.Translate(move);
-        }
+        Vector3 move = new Vector3(-velocity * Time.deltaTime * playerMovement.xVelocity, 0, 0);
+        tilemap.transform.Translate(move);
+    }
+
+    private void ResetPosition ()
+    {
+        SecondPlane.position = SecondInitialPos;
     }
 }

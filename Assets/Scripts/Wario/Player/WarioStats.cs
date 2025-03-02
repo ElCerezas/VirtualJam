@@ -12,12 +12,16 @@ public class WarioStats : MonoBehaviour
     public static Action<int> OnHeartsChanged;
     public static Action<int> OnCoinsChanged;
 
+    public static Action OnPlayerKilled;
+
+    public static Action<Vector3> OnChangePosition;
+
     [SerializeField] public int InitialHearts = 3;
     public int Hearts;
     public int Coins;
 
     public Transform transform;
-    public Vector3 lastPos;
+    public Transform SpawnPoint;
 
     private void OnEnable()
     {
@@ -46,20 +50,19 @@ public class WarioStats : MonoBehaviour
         stateManager = WarioStateManager.Instance;
     }
 
-    private void Update()
-    {
-        if(stateManager.IsGrounded)
-        {
-            lastPos = transform.position;
-        }
-    }
-
     private void UpdateHearts(int value)
     {
         if (value < 0)
         {
-            transform.position = lastPos;
+            OnPlayerKilled?.Invoke();
+            AudioManager.Instance.PlaySFX("Damage");
+            transform.position = SpawnPoint.position;
             Hearts = Mathf.Max(0, Hearts + value);
+            
+            if (Hearts == 0)
+            {
+                GameManager.GameLose();
+            }
         }
         else
         {
@@ -73,5 +76,4 @@ public class WarioStats : MonoBehaviour
         Coins = Mathf.Max(0, Coins + value);
         OnCoinsChanged?.Invoke(Coins);
     }
-
 }

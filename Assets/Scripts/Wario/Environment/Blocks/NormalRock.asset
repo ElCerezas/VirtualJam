@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: NormalRock
   m_EditorClassIdentifier: 
   tileSprite: {fileID: -1489391863, guid: 43de9f6fba54d704d9ab1d21e1bd104f, type: 3}
-  rockType: 0
+  rockType: 1
   itemsDropped: []
-  BrokenTile: {fileID: 11400000, guid: 39edbfab21d3c4840a81ec99f519686b, type: 2}
+  SecondTile: {fileID: 0}
