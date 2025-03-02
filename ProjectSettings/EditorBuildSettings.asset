@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Teleroboxer.unity
     guid: 88320cc3eef1b614c8dbf1adfa4bd2fa
   - enabled: 1
+    path: Assets/Scenes/WarioLand.unity
+    guid: ccd5e50db3a926044ad81eab79ce873c
+  - enabled: 1
     path: Assets/Scenes/MariosTenis.unity
     guid: e87ccebc0b7faba41a942bdb2ae6e5cc
   - enabled: 1

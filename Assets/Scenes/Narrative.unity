@@ -664,7 +664,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ElCerezas estuvo aqui
+  m_text: "El peque\xF1o se\xF1or ElCerezas estuvo aqui\nHablo muchisisisissimo i
+    esas cosas\nAsi que decidio volver-se un helicoptero \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4cd2f490b6fe37b4a94365e81662a215, type: 2}
   m_sharedMaterial: {fileID: -4491422818524739468, guid: 4cd2f490b6fe37b4a94365e81662a215, type: 2}
@@ -691,7 +692,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
+  m_fontSize: 23.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

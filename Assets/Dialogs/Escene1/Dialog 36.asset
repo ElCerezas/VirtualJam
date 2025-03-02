@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Background: {fileID: -5813258641180341314, guid: c027efb5db6aff04cbefc6912ec8487e, type: 3}
   Character: {fileID: 0}
-  TextImage: {fileID: 0}
+  TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
   Name: 
   Dialog: 
   writtingSpeed: 0.15

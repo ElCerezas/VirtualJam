@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Background: {fileID: 21300000, guid: b8d6709e49730974b9affb51cc53c4f1, type: 3}
   Character: {fileID: 636410753, guid: 8028421d8d8fcb045ad74cdd9101b4bc, type: 3}
-  TextImage: {fileID: 0}
+  TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
   Name: "Psic\xF3loga"
   Dialog: Ahora quiero que te transportes a tu mayor temor que es el virtual boy
     y quiero que intentes profundizar en ello de una manera interna.

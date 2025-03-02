@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a3f5db6feb6864240a26939b7d2f1a04
+guid: c8e41c9d5a783ef4d9ac28c380a80cf8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1182605801623442229
-    second: letra-amarilla_0
+      213: -8689592378835330048
+    second: Untitled_Artwork (24)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: letra-amarilla_0
+      name: Untitled_Artwork (24)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 43
-        width: 484
-        height: 549
+        x: 17
+        y: 635
+        width: 3310
+        height: 1053
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bcc2be40a4a869fe0800000000000000
-      internalID: -1182605801623442229
+      spriteID: 00c149855cd586780800000000000000
+      internalID: -8689592378835330048
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      letra-amarilla_0: -1182605801623442229
+      Untitled_Artwork (24)_0: -8689592378835330048
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

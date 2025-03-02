@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Background: {fileID: 0}
   Character: {fileID: 562943768, guid: beac1089196ec7346bd32ff584e76253, type: 3}
-  TextImage: {fileID: 0}
+  TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
   Name: Rin
   Dialog: "\xA1Pues tengo una adicci\xF3n!"
   writtingSpeed: 0.05
   audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
   loopAudio: 1
+  fadeOut: 0
