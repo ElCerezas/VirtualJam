@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7fa6bf4f29f27540b0db035cea40c48, type: 3}
   m_Name: Dialog 12
   m_EditorClassIdentifier: 
-  Background: {fileID: 21300000, guid: 81b983eea50d04f4f98957d032ebc8c0, type: 3}
+  Background: {fileID: 5863269493258872220, guid: 1e5d7060b7bc24d48a9297870ff7902f, type: 3}
   Character: {fileID: 0}
   TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
   Name: 

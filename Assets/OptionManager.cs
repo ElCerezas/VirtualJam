@@ -8,7 +8,7 @@ public class OptionManager : MonoBehaviour
     [SerializeField] AudioClip piruletasClick;
     NarrativeManager narrativeManager;
     GameManager gameManager;
-    [SerializeField] GameObject character, bg;
+    [SerializeField] GameObject character, bg, fader;
     bool onceTime = false;
     private void Start()
     {
@@ -29,6 +29,7 @@ public class OptionManager : MonoBehaviour
     public void OnSelectBlue()
     {
         Debug.Log("AzulPulsado");
+        fader.SetActive(false);
         bluePill.interactable = false;
         redPill.interactable = false;
         if (piruletasClick != null)
@@ -41,6 +42,7 @@ public class OptionManager : MonoBehaviour
     public void OnSelectRed()
     {
         Debug.Log("RojoPulsado");
+        fader.SetActive(false);
         bluePill.interactable = false;
         redPill.interactable = false;
         if (piruletasClick != null)

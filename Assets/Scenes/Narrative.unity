@@ -981,6 +981,7 @@ MonoBehaviour:
   piruletasClick: {fileID: 0}
   character: {fileID: 694836276}
   bg: {fileID: 1386386740}
+  fader: {fileID: 215812120}
 --- !u!1 &603158520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,7 +1347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7065819209812936963, guid: 9063be4df301141448dcc3e84568d8f7, type: 3}
+  m_Sprite: {fileID: 8056269757015164320, guid: 35909d402ecc3fb4880155cb75a6033a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
