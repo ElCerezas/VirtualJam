@@ -8,6 +8,7 @@ public class OptionManager : MonoBehaviour
     [SerializeField] AudioClip piruletasClick;
     NarrativeManager narrativeManager;
     GameManager gameManager;
+    [SerializeField] GameObject character, bg;
     bool onceTime = false;
     private void Start()
     {
@@ -19,6 +20,7 @@ public class OptionManager : MonoBehaviour
     {
         if (!onceTime)
         {
+            DisableAll();
             bluePill.interactable = true;
             redPill.interactable = true;
             onceTime = true;
@@ -47,5 +49,18 @@ public class OptionManager : MonoBehaviour
             audioPlayer.Play();
         }
         StartCoroutine(narrativeManager.FadeScreen(() => gameManager.GoToScene("Ending")));
+    }
+
+    void DisableAll()
+    {
+        int childs = transform.childCount;
+        for (int i = 0; i < childs; i++)
+        {
+            GameObject child = transform.GetChild(i).gameObject;
+            if ((child != bluePill.gameObject) && (child != redPill.gameObject) && (child != bg) && (child!=character))
+            {
+                transform.GetChild(i).gameObject.SetActive(false);
+            }
+        }
     }
 }
