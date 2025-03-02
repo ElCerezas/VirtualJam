@@ -18,5 +18,5 @@ MonoBehaviour:
   Name: 
   Dialog: 
   writtingSpeed: 0.05
-  audio: {fileID: 8300000, guid: 0b39a1ebe6ebc0441911c9feda13d481, type: 3}
+  audio: {fileID: 0}
   fadeOut: 0
