@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -68,9 +69,9 @@ public class Movement : MonoBehaviour
 
     private void OnMove(InputValue value)
     {
-        var direccion = value.Get<float>();
+        Vector2 direccion = value.Get<Vector2>(); // Cambia float a Vector2
 
-        if (direccion < 0)
+        if (direccion.x < 0)
         {
             if (_right)
             {
@@ -79,7 +80,7 @@ public class Movement : MonoBehaviour
             }
             _horizontalDir = -1;
         }
-        else if (direccion > 0)
+        else if (direccion.x > 0)
         {
             if (!_right)
             {
@@ -96,6 +97,7 @@ public class Movement : MonoBehaviour
         _velocity.x = _horizontalDir * _speed;
         _velocity.y = 0;
     }
+
 
     private void OnHit()
     {

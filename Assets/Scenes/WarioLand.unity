@@ -1767,7 +1767,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: Wario
+  m_DefaultActionMap: 7e7fe52a-8ea8-4eaa-8dfb-7e2099621a9d
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!50 &950830812

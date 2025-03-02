@@ -15,7 +15,7 @@ MonoBehaviour:
   Background: {fileID: 5863269493258872220, guid: 1e5d7060b7bc24d48a9297870ff7902f, type: 3}
   Character: {fileID: 0}
   TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
-  Name: 
+  Name: "Psic\xF3loga"
   Dialog: 
   writtingSpeed: 0.05
   audio: {fileID: 0}
