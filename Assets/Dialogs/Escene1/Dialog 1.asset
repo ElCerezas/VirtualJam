@@ -18,5 +18,5 @@ MonoBehaviour:
   Name: Rin
   Dialog: "No estoy segure de hacer esto,\npero all\xE1 vamos..."
   writtingSpeed: 0.05
-  audio: {fileID: 0}
+  audio: {fileID: 8300000, guid: 61d661e778edfad4faabad2019b541e5, type: 3}
   fadeOut: 0

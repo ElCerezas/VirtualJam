@@ -15,8 +15,8 @@ MonoBehaviour:
   Background: {fileID: 0}
   Character: {fileID: 0}
   TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
-  Name: 
-  Dialog: 
+  Name: Rin
+  Dialog: VIRTUAL BOY
   writtingSpeed: 0.05
   audio: {fileID: 0}
   fadeOut: 0

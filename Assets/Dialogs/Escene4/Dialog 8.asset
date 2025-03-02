@@ -16,7 +16,7 @@ MonoBehaviour:
   Character: {fileID: 1492906901, guid: 8028421d8d8fcb045ad74cdd9101b4bc, type: 3}
   TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
   Name: "Psic\xF3loga"
-  Dialog: "\"Azul: Seguir con el bucle de adicci\xF3n eterna\n\""
+  Dialog: "\"Azul: Seguir con el bucle de adicci\xF3n eterna\""
   writtingSpeed: 0.05
   audio: {fileID: 0}
   fadeOut: 1
