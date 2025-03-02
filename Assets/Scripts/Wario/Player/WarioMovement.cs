@@ -38,10 +38,12 @@ public class WarioMovement : MonoBehaviour
         {
             if (stateManager.IsGrounded)
             {
+                AudioManager.Instance.PlaySFX("Jump");
                 StartJump();
             }
             else if (stateManager.IsOnPowerJump)
             {
+                AudioManager.Instance.PlaySFX("PowerUp");
                 StartJump();
                 StartCoroutine(SwitchPlane());
             }
@@ -53,7 +55,6 @@ public class WarioMovement : MonoBehaviour
         rb.linearVelocityY = 0;
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         WarioAnimation.OnJumpStarted.Invoke();
-        AudioManager.Instance.PlaySFX("Jump");
     }
 
     private IEnumerator SwitchPlane()

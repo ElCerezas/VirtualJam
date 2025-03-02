@@ -39,6 +39,9 @@ public class AudioManager : MonoBehaviour
             case "Jump":
                 SoundEffects.PlayOneShot(Jump);
                 break;
+            case "PowerUp":
+                SoundEffects.PlayOneShot(PowerUp0);
+                break;
             default:
                 break;
         }
