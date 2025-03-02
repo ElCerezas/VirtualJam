@@ -743,6 +743,7 @@ MonoBehaviour:
   textImage: {fileID: 1074130187}
   fader: {fileID: 215812121}
   typingSound: {fileID: 348529734}
+  typing: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
   fadeDuration: 0.5
 --- !u!114 &348529730
 MonoBehaviour:

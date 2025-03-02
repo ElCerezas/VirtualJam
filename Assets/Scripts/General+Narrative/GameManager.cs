@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     }
     public void NextScene()
     {
-        PlayerPrefs.SetInt("chapterIndex", 3);
+        PlayerPrefs.SetInt("chapterIndex", 0);
         PlayerPrefs.SetInt("dialogIndex", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

@@ -18,6 +18,6 @@ MonoBehaviour:
   Name: Rin
   Dialog: "Ya no hay vuelta atr\xE1s\u2026."
   writtingSpeed: 0.1
-  audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
-  loopAudio: 1
+  audio: {fileID: 8300000, guid: 3ab0700ccd0525a48ba7279c24eacf69, type: 3}
+  loopAudio: 0
   fadeOut: 1

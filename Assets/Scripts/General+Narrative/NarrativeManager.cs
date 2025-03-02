@@ -19,6 +19,7 @@ public class NarrativeManager : MonoBehaviour
     [SerializeField] Image background, character, textImage;
     [SerializeField] Image fader;
     [SerializeField] AudioSource typingSound;
+    [SerializeField] AudioClip typing;
 
     private Coroutine typingCoroutine;
     private bool isTyping = false;
@@ -77,15 +78,6 @@ public class NarrativeManager : MonoBehaviour
         if (background.enabled) background.sprite = actualDialog?.Background;
         characterName.text = actualDialog.GetName();
 
-        if (typingSound)
-        {
-            typingSound.clip = actualDialog.audio;
-            typingSound.loop = actualDialog.loopAudio;
-
-            typingSound.Stop();
-            typingSound.Play();
-        }
-
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
         typingCoroutine = StartCoroutine(TypeText(actualDialog.GetDialog()));
     }
@@ -94,6 +86,10 @@ public class NarrativeManager : MonoBehaviour
     {
         if (dialogIndex < actualScene.Length)
         {
+            typingSound.clip = actualDialog.audio;
+            typingSound.loop = false;
+            typingSound.Stop();
+            typingSound.Play();
             actualDialog = actualScene[dialogIndex];
             textImage.enabled = actualDialog.GetDialog() == null || actualDialog.GetDialog() == "" ? false : true;
             character.enabled = actualDialog.Character == null ? false : true;
@@ -128,15 +124,16 @@ public class NarrativeManager : MonoBehaviour
 
         foreach (char letter in text.ToCharArray())
         {
+            if (!typingSound.isPlaying)
+            {
+                typingSound.clip = typing;
+                typingSound.loop = true;
+                typingSound.Play();
+            }
             dialog.text += letter;
             yield return new WaitForSeconds(actualDialog.writtingSpeed);
         }
-
-        if (typingSound && typingSound.loop)
-        {
-            typingSound.Stop();
-        }
-
+        typingSound.Stop();
         isTyping = false;
     }
 
