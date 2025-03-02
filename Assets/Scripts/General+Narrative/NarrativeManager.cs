@@ -63,6 +63,15 @@ public class NarrativeManager : MonoBehaviour
             }
             return;
         }
+        // Detener todos los sonidos antes de cambiar el diálogo
+        typingSound.Stop();
+        // Si hay un audio especial para este diálogo, reproducirlo antes
+        if (actualDialog.audio != null)
+        {
+            typingSound.clip = actualDialog.audio;
+            typingSound.loop = false;
+            typingSound.Play();
+        }
         if (actualDialog.fadeOut)
         {
             StartCoroutine(FadeScreen(() => WhatNext()));
@@ -86,14 +95,12 @@ public class NarrativeManager : MonoBehaviour
     {
         if (dialogIndex < actualScene.Length)
         {
-            typingSound.clip = actualDialog.audio;
-            typingSound.loop = false;
-            typingSound.Stop();
-            typingSound.Play();
+            
+
             actualDialog = actualScene[dialogIndex];
-            textImage.enabled = actualDialog.GetDialog() == null || actualDialog.GetDialog() == "" ? false : true;
-            character.enabled = actualDialog.Character == null ? false : true;
-            background.enabled = actualDialog.Background == null ? false : true;
+            textImage.enabled = !string.IsNullOrEmpty(actualDialog.GetDialog());
+            character.enabled = actualDialog.Character != null;
+            background.enabled = actualDialog.Background != null;
 
             ShowDialog();
             dialogIndex++;
@@ -106,7 +113,6 @@ public class NarrativeManager : MonoBehaviour
                 case 1: gameManager.NarrativeGoToGame(3); break; //Tenis
                 case 2: gameManager.NarrativeGoToGame(4); break; //Wario
                 default:
-                    //Time to decide
                     GetComponent<PlayerInput>().enabled = false;
                     dialog.text = "";
                     characterName.text = "";
@@ -117,6 +123,7 @@ public class NarrativeManager : MonoBehaviour
         }
     }
 
+
     IEnumerator TypeText(string text)
     {
         isTyping = true;
@@ -124,7 +131,7 @@ public class NarrativeManager : MonoBehaviour
 
         foreach (char letter in text.ToCharArray())
         {
-            if (!typingSound.isPlaying)
+            if (!typingSound.isPlaying && isTyping)
             {
                 typingSound.clip = typing;
                 typingSound.loop = true;

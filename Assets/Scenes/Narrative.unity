@@ -979,7 +979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bluePill: {fileID: 104764146}
   redPill: {fileID: 111541747}
-  piruletasClick: {fileID: 0}
+  piruletasClick: {fileID: 8300000, guid: e36e3e96baa51364197e8e864252c687, type: 3}
   character: {fileID: 694836276}
   bg: {fileID: 1386386740}
   fader: {fileID: 215812120}

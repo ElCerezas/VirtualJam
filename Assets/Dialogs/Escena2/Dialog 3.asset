@@ -18,7 +18,6 @@ MonoBehaviour:
   Name: "Psic\xF3loga"
   Dialog: "Como has estado esta semana, cu\xE9ntame.\n\xBFC\xF3mo te has sentido?
     \n\xBFQu\xE9 has estado haciendo? "
-  writtingSpeed: 0.1
-  audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
-  loopAudio: 1
+  writtingSpeed: 0.05
+  audio: {fileID: 0}
   fadeOut: 0

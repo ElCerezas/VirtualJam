@@ -17,7 +17,6 @@ MonoBehaviour:
   TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
   Name: Rin
   Dialog: "Si creo que s\xED. \xBFEsta semana ha sido rara, sabes? "
-  writtingSpeed: 0.5
-  audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
-  loopAudio: 1
+  writtingSpeed: 0.05
+  audio: {fileID: 0}
   fadeOut: 0

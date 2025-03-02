@@ -17,7 +17,6 @@ MonoBehaviour:
   TextImage: {fileID: -1741066616288840682, guid: 74131ddc61602ca4c9443fa8d8f91c8b, type: 3}
   Name: "Psic\xF3loga"
   Dialog: '*suspira'
-  writtingSpeed: 0.2
-  audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
-  loopAudio: 1
+  writtingSpeed: 0.05
+  audio: {fileID: 0}
   fadeOut: 0

@@ -18,7 +18,6 @@ MonoBehaviour:
   Name: "Psic\xF3loga"
   Dialog: "Muy bien, respira y recuerda t\xFA controlas a la m\xE1quina, no ella
     a ti."
-  writtingSpeed: 0.5
-  audio: {fileID: 8300000, guid: 7fde866d0f197e14fad2948424cf3041, type: 3}
-  loopAudio: 1
+  writtingSpeed: 0.05
+  audio: {fileID: 0}
   fadeOut: 0

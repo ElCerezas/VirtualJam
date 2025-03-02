@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class StudioController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField]BGMusicLogic musicLogic;
+    Animator animator;
+    AudioSource audioSource;
+    private void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (!audioSource.isPlaying)
+        {
+            musicLogic.MusicRestart();
+            gameObject.SetActive(false);
+        }
     }
 }
