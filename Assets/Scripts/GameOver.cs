@@ -9,6 +9,8 @@ public class GameOver : MonoBehaviour
     }
     public void OnReturnTitle()
     {
+        PlayerPrefs.SetInt("chapterIndex", 0);
+        PlayerPrefs.SetInt("dialogIndex", 0);
         gameManager.GoToScene("Title");
     }
     public void OnEnding()
