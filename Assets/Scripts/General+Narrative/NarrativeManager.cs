@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class NarrativeManager : MonoBehaviour
@@ -8,6 +9,7 @@ public class NarrativeManager : MonoBehaviour
     public static int dialogIndex = 0;
     public static int chapterIndex = 0;
     GameManager gameManager;
+    OptionManager optionManager;
 
     DialogScriptableObj actualDialog;
     DialogScriptableObj[] actualScene;
@@ -26,6 +28,7 @@ public class NarrativeManager : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        optionManager = GetComponent<OptionManager>();
         Debug.Log("GettingInfo");
 
         chapterIndex = PlayerPrefs.GetInt("chapterIndex");
@@ -107,7 +110,12 @@ public class NarrativeManager : MonoBehaviour
                 case 1: gameManager.NarrativeGoToGame(3); break; //Tenis
                 case 2: gameManager.NarrativeGoToGame(4); break; //Wario
                 default:
-                    gameManager.NarrativeGoToGame(5);
+                    //Time to decide
+                    GetComponent<PlayerInput>().enabled = false;
+                    dialog.text = "";
+                    characterName.text = "";
+                    textImage.enabled = false;
+                    optionManager.OptionSelectionStart();
                     break;
             }
         }
@@ -132,7 +140,7 @@ public class NarrativeManager : MonoBehaviour
         isTyping = false;
     }
 
-    IEnumerator FadeScreen(System.Action onComplete)
+    public IEnumerator FadeScreen(System.Action onComplete)
     {
         float elapsedTime = 0f;
         Color startColor = fader.color;

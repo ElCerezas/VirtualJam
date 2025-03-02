@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     }
     public void NextScene()
     {
-        PlayerPrefs.SetInt("chapterIndex", 0);
+        PlayerPrefs.SetInt("chapterIndex", 3);
         PlayerPrefs.SetInt("dialogIndex", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -52,5 +52,12 @@ public class GameManager : MonoBehaviour
     public int GetSceneIndex()
     {
         return SceneManager.GetActiveScene().buildIndex;
+    }
+    public void GoToScene(string scene)
+    {
+        Debug.Log("To the end");
+        PlayerPrefs.SetInt("dialogIndex", NarrativeManager.dialogIndex);
+        PlayerPrefs.SetInt("chapterIndex", NarrativeManager.chapterIndex);
+        SceneManager.LoadScene(scene);
     }
 }
