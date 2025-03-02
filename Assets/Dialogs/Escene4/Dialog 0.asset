@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7fa6bf4f29f27540b0db035cea40c48, type: 3}
+  m_Name: Dialog 0
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1373401131886542964, guid: 6d4e9705f235e4d489d0a2bcd1b92c85, type: 3}
+  Character: {fileID: 0}
+  TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
+  Name: 
+  Dialog: 
+  writtingSpeed: 0.05
+  audio: {fileID: 0}
+  fadeOut: 0
