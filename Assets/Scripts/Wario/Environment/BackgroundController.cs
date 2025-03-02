@@ -37,7 +37,7 @@ public class BackgroundController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player.transform.position.x >= 30)
+        if (Player.transform.position.x >= 50)
         {
             MoveTilemap(SecondPlane, VelocitySecondPlane);
         }
