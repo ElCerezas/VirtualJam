@@ -34,6 +34,7 @@ public class WarioCollisionCheck : MonoBehaviour
         TileBase roofTile = ActualTilemap.GetTile(roofPosition);
         stateManager.IsGrounded = false;
         stateManager.IsOnPowerJump = (groundTile == powerJumpTile);
+
         if (groundTile is RockTile groundRock)
         {
             if (groundRock.rockType == RockType.Spike)

@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: LuckyRock
   m_EditorClassIdentifier: 
   tileSprite: {fileID: 1468463033, guid: 43de9f6fba54d704d9ab1d21e1bd104f, type: 3}
-  rockType: 2
+  rockType: 3
+  itemsDropped:
+  - {fileID: 1136698100721974149, guid: fe0cd88a74e26604096f6a7fc668ff10, type: 3}
+  - {fileID: 6309535355652178663, guid: f50b5caf11c34444bb0885e2e1d99da9, type: 3}
+  SecondTile: {fileID: 11400000, guid: 993bd5b1ee72dfc4da1c91cd935178c4, type: 2}

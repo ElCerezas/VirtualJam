@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
+    public static CameraManager Instance { get; private set; }
+
     [Header("Configuration")]
     public Transform Player;
     public float SmoothSpeed = 0.125f;
@@ -10,6 +12,14 @@ public class CameraManager : MonoBehaviour
     [Header("Limits")]
     public float minX;
     public float maxX;
+
+    private void Start()
+    {
+        if (Instance != null)
+        {
+            Instance = this;
+        }
+    }
 
     void LateUpdate()
     {

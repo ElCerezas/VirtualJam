@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: FireRock
   m_EditorClassIdentifier: 
   tileSprite: {fileID: 328012689, guid: 43de9f6fba54d704d9ab1d21e1bd104f, type: 3}
-  rockType: 3
-  itemDrop: {fileID: 0}
+  rockType: 4
+  itemsDropped: []
+  SecondTile: {fileID: 0}

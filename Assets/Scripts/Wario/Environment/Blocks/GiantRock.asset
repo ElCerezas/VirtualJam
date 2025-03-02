@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GiantRock
   m_EditorClassIdentifier: 
   tileSprite: {fileID: 1012741768, guid: 43de9f6fba54d704d9ab1d21e1bd104f, type: 3}
-  rockType: 5
+  rockType: 6
   itemsDropped:
   - {fileID: 1136698100721974149, guid: fe0cd88a74e26604096f6a7fc668ff10, type: 3}
+  SecondTile: {fileID: 0}

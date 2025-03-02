@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Spike
   m_EditorClassIdentifier: 
   tileSprite: {fileID: 874148080, guid: 43de9f6fba54d704d9ab1d21e1bd104f, type: 3}
-  rockType: 6
+  rockType: 7
   itemsDropped: []
-  BrokenTile: {fileID: 0}
+  SecondTile: {fileID: 0}

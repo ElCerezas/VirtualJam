@@ -15,7 +15,7 @@ public class WarioMovement : MonoBehaviour
 
     public float xVelocity;
     public float yVelocity;
-
+    
     void Awake()
     {
         player = GetComponent<Transform>();
@@ -53,6 +53,7 @@ public class WarioMovement : MonoBehaviour
         rb.linearVelocityY = 0;
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         WarioAnimation.OnJumpStarted.Invoke();
+        AudioManager.Instance.PlaySFX("Jump");
     }
 
     private IEnumerator SwitchPlane()
@@ -67,11 +68,6 @@ public class WarioMovement : MonoBehaviour
         var inputVal = value.Get<Vector2>();
         xVelocity = inputVal.x;
         FlipGameObject();
-    }
-
-    private void OnDash()
-    {
-
     }
 
     private void FlipGameObject()

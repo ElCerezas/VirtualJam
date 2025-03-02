@@ -1,5 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public enum RockType
 {
@@ -19,7 +21,7 @@ public class RockTile : TileBase
     public Sprite tileSprite;
     public RockType rockType;
     public GameObject[] itemsDropped;
-    public RockTile BrokenTile;
+    public RockTile SecondTile;
 
     public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
     {
@@ -29,22 +31,26 @@ public class RockTile : TileBase
 
     public void Break(Vector3Int position, Tilemap tilemap)
     {
-        if (rockType == RockType.Normal)
+        if (rockType == RockType.Broken)
         {
-            tilemap.SetTile(position, BrokenTile);
-        }
-        else if (rockType == RockType.Broken)
-        {
+            AudioManager.Instance.PlaySFX("BreakBlock");
             tilemap.SetTile(position, null);
             if (itemsDropped.Length > 0)
             {
-                Vector3 worldPosition = tilemap.GetCellCenterWorld(position);;
+                Vector3 worldPosition = tilemap.GetCellCenterWorld(position);
                 var result = Instantiate(itemsDropped[Random.Range(0, itemsDropped.Length)], worldPosition, Quaternion.identity);
             }
         }
         else if (rockType == RockType.Lucky)
         {
-            //tilemap.SetTile(position, );
+            AudioManager.Instance.PlaySFX("BreakBlock");
+            tilemap.SetTile(position, null);
+            if (itemsDropped.Length > 0)
+            {
+                Vector3 worldPosition = tilemap.GetCellCenterWorld(position);
+                var result = Instantiate(itemsDropped[Random.Range(0, itemsDropped.Length)], worldPosition, Quaternion.identity);
+            }
+            tilemap.SetTile(position, SecondTile);
         }
     }
 }
