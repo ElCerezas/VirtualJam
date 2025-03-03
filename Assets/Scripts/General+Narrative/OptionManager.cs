@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class OptionManager : MonoBehaviour
@@ -24,6 +25,10 @@ public class OptionManager : MonoBehaviour
             bluePill.interactable = true;
             redPill.interactable = true;
             onceTime = true;
+        }
+        if (gameManager.gameObject.GetComponent<EventSystem>().currentSelectedGameObject == null || gameManager.gameObject.GetComponent<EventSystem>().currentSelectedGameObject == bluePill.gameObject || gameManager.gameObject.GetComponent<EventSystem>().currentSelectedGameObject == redPill||gameObject)
+        {
+            gameManager.gameObject.GetComponent<EventSystem>().SetSelectedGameObject(bluePill.gameObject);
         }
     }
     public void OnSelectBlue()
