@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1fe35ce2c56ef4ea8b63d3866f3a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDialog: 7
+  maxDialog: 8
   maxScene: 4
   speed: 0.2
   frames: []
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b8d6709e49730974b9affb51cc53c4f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d6e756a56ef7b2448067872a7618f54, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -718,6 +718,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 055d2271f3808144ba690a1a0ade79a2, type: 2}
   - {fileID: 11400000, guid: e43b3028362c63541b968042b888feed, type: 2}
   - {fileID: 11400000, guid: 721b72a93fbe7d9429de45acb38574f5, type: 2}
+  - {fileID: 11400000, guid: 0469ce7534946a04eb128f02795fcf1d, type: 2}
   - {fileID: 11400000, guid: f071e0820020eca4a8c06b2a8ddab84f, type: 2}
   - {fileID: 11400000, guid: 5b0834adc5a24c141886d56ecd47af31, type: 2}
   - {fileID: 11400000, guid: e9f58e7c555fa524da93b6bd7f58b7bf, type: 2}
@@ -731,6 +732,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a78fcf84a1f513c4cb6ca0a23537cc30, type: 2}
   - {fileID: 11400000, guid: c984618517af7bf42a66081a1cbbe6ba, type: 2}
   - {fileID: 11400000, guid: 9f5f5c404ee27fb4b92b7068d987f60e, type: 2}
+  - {fileID: 11400000, guid: d2cec4fe883991848b00a4cd24a31b4c, type: 2}
   - {fileID: 11400000, guid: 10ba40a01e64cee4984b137f8bf8c3d3, type: 2}
   - {fileID: 11400000, guid: dfe89aedbae481d4f9dcc9ee5ea32148, type: 2}
   - {fileID: 11400000, guid: 04ea77c3f01b1224c98cb52aba72b9c0, type: 2}
@@ -1438,7 +1440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b8d6709e49730974b9affb51cc53c4f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d6e756a56ef7b2448067872a7618f54, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
