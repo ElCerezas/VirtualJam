@@ -16,8 +16,8 @@ MonoBehaviour:
   Character: {fileID: 636410753, guid: 8028421d8d8fcb045ad74cdd9101b4bc, type: 3}
   TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
   Name: "Psic\xF3loga"
-  Dialog: Ahora quiero que te transportes a tu mayor temor que es el virtual boy
-    y quiero que intentes profundizar en ello de una manera interna.
+  Dialog: Ahora quiero que hagas un ejercicio mental, visualizalo, quiero que intentes
+    profundizar en ello de una manera interna.
   writtingSpeed: 0.05
   audio: {fileID: 0}
   fadeOut: 1

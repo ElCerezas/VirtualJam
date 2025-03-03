@@ -17,7 +17,8 @@ MonoBehaviour:
   TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
   Name: "Psic\xF3loga"
   Dialog: "No tengo mucho conocimiento en consolas, \n\xBFPero no era ese el modelo
-    fallido de realidad virtual?"
+    fallido de realidad virtual de Nintendo? \xBFAquella que se veia solo en negro
+    y rojo?\nO algo asi\u0301 me quiere sonar."
   writtingSpeed: 0.05
   audio: {fileID: 0}
   fadeOut: 0

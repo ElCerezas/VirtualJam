@@ -16,8 +16,8 @@ MonoBehaviour:
   Character: {fileID: -371862122, guid: beac1089196ec7346bd32ff584e76253, type: 3}
   TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
   Name: Rin
-  Dialog: Lo que me pasa es que no paro de jugar a una maldita consola y es como
-    si me robase la vida.
+  Dialog: Lo que me pasa es que no puedo parar de jugar con una maldita consola y
+    es como si me estuviese robando la vida.
   writtingSpeed: 0.05
   audio: {fileID: 0}
   fadeOut: 0

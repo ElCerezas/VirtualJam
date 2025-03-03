@@ -16,8 +16,8 @@ MonoBehaviour:
   Character: {fileID: 562943768, guid: beac1089196ec7346bd32ff584e76253, type: 3}
   TextImage: {fileID: -6854976398968915178, guid: 1a6a5649ddbc66f43a024eb923b6bc04, type: 3}
   Name: Rin
-  Dialog: "Aparte me est\xE1 dejando mal de la vista y tengo la columna s\xFAper
-    arqueada desde que juego."
+  Dialog: "Aparte, me est\xE1 dejando mal de la vista y cada vez se me est\xE1 arquedando
+    ma\u0301s la espalda. \n"
   writtingSpeed: 0.05
   audio: {fileID: 0}
   fadeOut: 0
