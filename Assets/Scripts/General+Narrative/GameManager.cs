@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("dialogIndex", NarrativeManager.dialogIndex);
         PlayerPrefs.SetInt("chapterIndex", NarrativeManager.chapterIndex);
         SceneManager.LoadScene(scene);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public static void GameWin()
     {
@@ -40,6 +42,8 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("chapterIndex", prevChapter + 1);
         PlayerPrefs.SetInt("dialogIndex", 0);
         SceneManager.LoadScene("Narrative");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     public static void GameLose()
     {
@@ -47,6 +51,8 @@ public class GameManager : MonoBehaviour
         Debug.LogWarning($"Prev dialog: {PlayerPrefs.GetInt("dialogIndex")} PrevChapter: {PlayerPrefs.GetInt("chapterIndex")}");
         PlayerPrefs.SetInt("dialogIndex", prevDialog);
         SceneManager.LoadScene("Narrative");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     public int GetSceneIndex()
     {
@@ -58,5 +64,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("dialogIndex", NarrativeManager.dialogIndex);
         PlayerPrefs.SetInt("chapterIndex", NarrativeManager.chapterIndex);
         SceneManager.LoadScene(scene);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
