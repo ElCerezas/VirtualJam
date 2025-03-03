@@ -9,16 +9,13 @@ public class WarioDash : MonoBehaviour
 
     private float dashEndTime = 4f;
     private float nextDashTime = 4f;
-    private Vector2 dashDirection;
 
     private Rigidbody2D rb;
-    private WarioMovement movement;
     private WarioStateManager stateManager;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        movement = GetComponent<WarioMovement>();
     }
 
     private void Start()
@@ -38,7 +35,7 @@ public class WarioDash : MonoBehaviour
     {
         if (stateManager.IsDashing)
         {
-            rb.linearVelocity *= dashSpeed;
+            rb.linearVelocityX *= dashSpeed;
         }
     }
 
@@ -55,14 +52,11 @@ public class WarioDash : MonoBehaviour
         stateManager.IsDashing = true;
         dashEndTime = Time.time + dashDuration;
         nextDashTime = Time.time + dashCooldown;
-        //movement.enabled = false;
     }
 
     private void StopDash()
     {
         stateManager.IsDashing = false;
         rb.linearVelocity = Vector2.zero;
-        //movement.enabled = true;
     }
-
 }

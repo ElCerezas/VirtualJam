@@ -31,26 +31,26 @@ public class RockTile : TileBase
 
     public void Break(Vector3Int position, Tilemap tilemap)
     {
-        if (rockType == RockType.Broken)
+        if (rockType == RockType.Broken || rockType == RockType.Lucky)
         {
             AudioManager.Instance.PlaySFX("BreakBlock");
             tilemap.SetTile(position, null);
             if (itemsDropped.Length > 0)
             {
                 Vector3 worldPosition = tilemap.GetCellCenterWorld(position);
+                worldPosition.y++;
                 var result = Instantiate(itemsDropped[Random.Range(0, itemsDropped.Length)], worldPosition, Quaternion.identity);
+                
+                if (tilemap.gameObject.layer == LayerMask.NameToLayer("Background"))
+                {
+                    result.transform.localScale *= 0.5f;
+                }
+                result.transform.SetParent(tilemap.transform);
             }
-        }
-        else if (rockType == RockType.Lucky)
-        {
-            AudioManager.Instance.PlaySFX("BreakBlock");
-            tilemap.SetTile(position, null);
-            if (itemsDropped.Length > 0)
+            if (rockType == RockType.Lucky)
             {
-                Vector3 worldPosition = tilemap.GetCellCenterWorld(position);
-                var result = Instantiate(itemsDropped[Random.Range(0, itemsDropped.Length)], worldPosition, Quaternion.identity);
+                tilemap.SetTile(position, SecondTile);
             }
-            tilemap.SetTile(position, SecondTile);
         }
     }
 }

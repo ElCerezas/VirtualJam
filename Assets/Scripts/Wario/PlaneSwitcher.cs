@@ -13,10 +13,10 @@ public class PlaneSwitcher : MonoBehaviour
     public LayerMask BackgroundLayer;
     private Collider2D playerCollider;
 
+    private WarioStateManager stateManager;
+
     public static Action OnSwitchPlane;
     public static Action<bool> OnPlaneSwitched;
-
-    private bool isForegroundActive = true;
 
     private void OnEnable()
     {
@@ -31,16 +31,21 @@ public class PlaneSwitcher : MonoBehaviour
     private void Awake()
     {
         playerCollider = GetComponent<BoxCollider2D>();
-        SetPlaneCollisions(isForegroundActive);
+        SetPlaneCollisions(true);
+    }
+
+    private void Start()
+    {
+        stateManager = WarioStateManager.Instance;
     }
 
     private void SwitchPlane()
     {
-        isForegroundActive = !isForegroundActive;
+        stateManager.IsInForeground = !stateManager.IsInForeground;
 
         // Cambiar colisiones del jugador
-        SetPlaneCollisions(isForegroundActive);
-        OnPlaneSwitched?.Invoke(isForegroundActive);
+        SetPlaneCollisions(stateManager.IsInForeground);
+        OnPlaneSwitched?.Invoke(stateManager.IsInForeground);
     }
 
     private void SetPlaneCollisions(bool isForeground)

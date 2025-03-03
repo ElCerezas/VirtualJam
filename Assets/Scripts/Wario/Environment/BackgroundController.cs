@@ -30,19 +30,17 @@ public class BackgroundController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        VelocitySecondPlane = VelocityFirstPlane * 2;
         SecondInitialPos = SecondPlane.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Player.transform.position.x >= 50)
+        if (Player.transform.position.x >= 55)
         {
             MoveTilemap(SecondPlane, VelocitySecondPlane);
         }
         //MoveTilemap(FirstPlane, VelocityFirstPlane);
-        
     }
 
     private void MoveTilemap(Transform tilemap, float velocity)

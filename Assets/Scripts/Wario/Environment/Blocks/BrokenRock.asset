@@ -15,6 +15,5 @@ MonoBehaviour:
   tileSprite: {fileID: -277560549, guid: 43de9f6fba54d704d9ab1d21e1bd104f, type: 3}
   rockType: 2
   itemsDropped:
-  - {fileID: 1136698100721974149, guid: 43447e8d1a146614a87c095295180d6a, type: 3}
   - {fileID: 6309535355652178663, guid: f50b5caf11c34444bb0885e2e1d99da9, type: 3}
   SecondTile: {fileID: 0}

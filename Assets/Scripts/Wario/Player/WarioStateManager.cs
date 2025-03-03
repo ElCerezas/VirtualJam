@@ -10,6 +10,8 @@ public class WarioStateManager : MonoBehaviour
     public bool IsJumping = false;
     public bool IsDashing = false;
 
+    public bool IsInForeground = true;
+
     private void Awake()
     {
         if (Instance == null)

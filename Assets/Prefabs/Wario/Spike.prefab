@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 7211564446691868898}
   endPoint: {fileID: 7186571895141759317}
-  speed: 1
+  speed: 1.1
   startScale: {x: 2, y: 2, z: 1}
   endScale: {x: 1, y: 1, z: 0.5}
   scaleSpeed: 0.5
