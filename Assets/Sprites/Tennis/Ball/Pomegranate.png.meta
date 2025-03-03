@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cd4792d79965ab442a28f90be2a1ace4
+guid: 66cbbb46c30db19419a0a2d5bf8fa2e8
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -103,9 +103,9 @@ TextureImporter:
       name: Pomegranate_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 3
         y: 0
-        width: 24
+        width: 26
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}

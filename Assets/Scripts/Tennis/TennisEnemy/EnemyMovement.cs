@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -18,6 +19,9 @@ public class EnemyMovement : MonoBehaviour
     private Transform _target;
 
     private bool _facingRight;
+
+    private bool _isMoving = false;
+    private bool _isHitting = false;
 
     private SpriteRenderer _sprite;
 
@@ -52,10 +56,12 @@ public class EnemyMovement : MonoBehaviour
         GameCounter.OnRestartSignal -= OnRestart;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Mathf.Abs(transform.position.x - _target.position.x) > 0.2)
+        if (Mathf.Abs(transform.position.x - _target.position.x) > 0.05)
         {
+            _animator.SetBool("Mov", true);
+
             _rb.linearVelocity = _velocity * _speed;
 
             if (_rb.position.x < _target.position.x)
@@ -76,11 +82,10 @@ public class EnemyMovement : MonoBehaviour
                     _facingRight = false;
                 }
             }
-            _animator.SetBool("Mov", true);
         }
         else{
-            _rb.linearVelocity = Vector2.zero;
-
+            _velocity.x = 0;
+            _rb.linearVelocity = _velocity;
             _animator.SetBool("Mov", false);
         }
         _animator.SetBool("Hit", false);
@@ -90,11 +95,11 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "TennisBall")
         {
+            _animator.SetBool("Hit", true);
+
             if (_target.position.x > 1) OnEnemyHitBall?.Invoke(-1);
             else if (_target.position.x < 1) OnEnemyHitBall?.Invoke(1);
             else OnEnemyHitBall?.Invoke(0);
-
-            _animator.SetBool("Hit", true);
 
             //TODO SONIDO DE RAQUETAZO
         }
