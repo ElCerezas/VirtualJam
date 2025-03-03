@@ -182,7 +182,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0.63529414}
     m_HighlightedColor: {r: 0.3607843, g: 0.85046315, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.36078432, g: 0.85098046, b: 1, a: 1}
     m_DisabledColor: {r: 0.5345911, g: 0.5345911, b: 0.5345911, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.2
@@ -327,7 +327,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0.63529414}
     m_HighlightedColor: {r: 1, g: 0.36163503, b: 0.36163503, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 0.36078432, b: 0.36078432, a: 1}
     m_DisabledColor: {r: 0.5345911, g: 0.5345911, b: 0.5345911, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.2
@@ -730,7 +730,6 @@ MonoBehaviour:
   Chapter3:
   - {fileID: 11400000, guid: eb61e400080718043b638bd868dd0e94, type: 2}
   - {fileID: 11400000, guid: 90dcdec8fa8e221479b24a56363d1c74, type: 2}
-  - {fileID: 11400000, guid: 055d2271f3808144ba690a1a0ade79a2, type: 2}
   - {fileID: 11400000, guid: e43b3028362c63541b968042b888feed, type: 2}
   - {fileID: 11400000, guid: 721b72a93fbe7d9429de45acb38574f5, type: 2}
   - {fileID: 11400000, guid: f071e0820020eca4a8c06b2a8ddab84f, type: 2}
