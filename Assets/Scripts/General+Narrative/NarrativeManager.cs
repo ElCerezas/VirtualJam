@@ -26,9 +26,12 @@ public class NarrativeManager : MonoBehaviour
 
     [SerializeField] private float fadeDuration = 0.5f;
 
+    PauseManager pauseManager;
+
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        pauseManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<PauseManager>();
         optionManager = GetComponent<OptionManager>();
         Debug.Log("GettingInfo");
 
@@ -47,6 +50,10 @@ public class NarrativeManager : MonoBehaviour
 
     public void OnNextDialog()
     {
+        if (pauseManager.isPaused)
+        {
+            return;
+        }
         if (actualDialog == null)
         {
             actualDialog = actualScene[dialogIndex];

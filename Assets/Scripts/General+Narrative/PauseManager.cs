@@ -13,7 +13,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject pauseScreen;
 
     public static float VFXvolume;
-    private bool isPaused = false;
+    public bool isPaused = false;
 
     void Start()
     {
