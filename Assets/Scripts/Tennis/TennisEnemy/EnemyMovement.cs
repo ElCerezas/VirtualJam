@@ -20,9 +20,6 @@ public class EnemyMovement : MonoBehaviour
 
     private bool _facingRight;
 
-    private bool _isMoving = false;
-    private bool _isHitting = false;
-
     private SpriteRenderer _sprite;
 
     private Animator _animator;
@@ -30,6 +27,8 @@ public class EnemyMovement : MonoBehaviour
     public delegate void EnemyHitBall(int direction);
     public static event EnemyHitBall OnEnemyHitBall;
 
+    public delegate void HitSound();
+    public static event HitSound OnHitSound;
 
     void Start()
     {
@@ -101,7 +100,7 @@ public class EnemyMovement : MonoBehaviour
             else if (_target.position.x < 1) OnEnemyHitBall?.Invoke(1);
             else OnEnemyHitBall?.Invoke(0);
 
-            //TODO SONIDO DE RAQUETAZO
+            OnHitSound?.Invoke();
         }
     }
 
