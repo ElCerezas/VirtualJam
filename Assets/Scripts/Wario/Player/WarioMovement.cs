@@ -1,11 +1,13 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class WarioMovement : MonoBehaviour
 {
-    [Header("Settings")]
+    public static WarioMovement Instance { get; private set; }
 
+    [Header("Settings")]
     [SerializeField] private float foreMoveSpeed = 5f;
     [SerializeField] private float foreJumpForce = 20f;
 
@@ -22,11 +24,14 @@ public class WarioMovement : MonoBehaviour
     public float xVelocity;
     public float yVelocity;
 
-
     void Awake()
     {
-        player = GetComponent<Transform>();
-        rb = GetComponent<Rigidbody2D>();
+        if (Instance == null)
+        {
+            Instance = this;
+            player = GetComponent<Transform>();
+            rb = GetComponent<Rigidbody2D>();
+        }
     }
     private void Start()
     {
@@ -39,7 +44,6 @@ public class WarioMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocityX = xVelocity * moveSpeed;
-        //yVelocity = rb.linearVelocityY;
     }
 
     public void OnJump()
