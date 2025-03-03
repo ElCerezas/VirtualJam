@@ -140,7 +140,10 @@ public class NarrativeManager : MonoBehaviour
             dialog.text += letter;
             yield return new WaitForSeconds(actualDialog.writtingSpeed);
         }
-        typingSound.Stop();
+        if (typingSound.loop)
+        {
+            typingSound.Stop();
+        }
         isTyping = false;
     }
 
