@@ -531,8 +531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FIRST_COUNTER: 10
-  SECOND_COUNTER: 20
-  LAST_COUNTER: 30
+  SECOND_COUNTER: 15
+  LAST_COUNTER: 20
   _text: {fileID: 1421683995}
 --- !u!4 &492375077
 Transform:
@@ -700,7 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.2
-  magnitude: 0.1
+  magnitude: 0.09
 --- !u!1 &580396633
 GameObject:
   m_ObjectHideFlags: 0
