@@ -53,11 +53,6 @@ public class Movement : MonoBehaviour
     {
         _rigidbody.linearVelocity = _velocity;
 
-        if (_velocity.x == 0)
-        {
-            _animator.SetBool("Mov", false);
-        }
-
         _animator.SetBool("Hit", false);
     }
 
@@ -79,9 +74,10 @@ public class Movement : MonoBehaviour
 
     private void OnMove(InputValue value)
     {
-        Vector2 direccion = value.Get<Vector2>(); // Cambia float a Vector2
+        var inputVal = value.Get<float>();
+        Debug.Log(value.GetType());
 
-        if (direccion.x < 0)
+        if (inputVal < 0)
         {
             _animator.SetBool("Mov", true);
             if (_right)
@@ -91,8 +87,9 @@ public class Movement : MonoBehaviour
             }
             _horizontalDir = -1;
         }
-        else if (direccion.x > 0)
+        else if (inputVal > 0)
         {
+            _animator.SetBool("Mov", true);
             if (!_right)
             {
                 _right = true;
@@ -102,6 +99,7 @@ public class Movement : MonoBehaviour
         }
         else
         {
+            _animator.SetBool("Mov", false);
             _horizontalDir = 0;
         }
 
