@@ -16,7 +16,7 @@ MonoBehaviour:
   Character: {fileID: 1093099006, guid: beac1089196ec7346bd32ff584e76253, type: 3}
   TextImage: {fileID: -1741066616288840682, guid: 74131ddc61602ca4c9443fa8d8f91c8b, type: 3}
   Name: Rin
-  Dialog: (Vaya... Otra vez aqui..)
+  Dialog: '*Vaya... Otra vez aqui..'
   writtingSpeed: 0.05
   audio: {fileID: 8300000, guid: 3ab0700ccd0525a48ba7279c24eacf69, type: 3}
   fadeOut: 1
