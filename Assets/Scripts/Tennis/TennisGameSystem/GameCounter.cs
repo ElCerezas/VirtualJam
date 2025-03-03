@@ -28,6 +28,12 @@ public class GameCounter : MonoBehaviour
     public delegate void RestartPart();
     public static event RestartPart OnRestartSignal;
 
+    public delegate void FailSound();
+    public static event FailSound OnFailSound;
+
+    public delegate void PartPassSound();
+    public static event PartPassSound OnPartPassSound;
+
     private void Start()
     {
         _state = FIRST_STATE;
@@ -67,13 +73,15 @@ public class GameCounter : MonoBehaviour
 
             UpdateText();
 
-            //TODO SONIDO DE CUANDO PERDEMOS LA PELOTA PQ SE VA FUERA DEL ESCENARIO
+            OnFailSound?.Invoke();
         }
     }
 
     private void UpdateCounter()
     {
         _counter--;
+
+        UpdateText();
 
         switch (_state)
         {
@@ -83,10 +91,11 @@ public class GameCounter : MonoBehaviour
                     _state = SECOND_STATE;
                     _counter = SECOND_COUNTER;
 
+                    UpdateText();
+
                     OnIncreaseV?.Invoke();
                     OnRestartSignal.Invoke();
-
-                    //TODO SONIDO DE QUE HA CONSEGUIDO UNA PARTE
+                    OnPartPassSound?.Invoke();
                 }
                 break;
             case SECOND_STATE:
@@ -95,22 +104,21 @@ public class GameCounter : MonoBehaviour
                     _state = LAST_STATE;
                     _counter = LAST_COUNTER;
 
+                    UpdateText();
+
                     OnIncreaseV?.Invoke();
                     OnRestartSignal.Invoke();
-
-                    //TODO SONIDO DE QUE HA CONSEGUIDO UNA PARTE
+                    OnPartPassSound?.Invoke();
                 }
                 break;
             case LAST_STATE:
                 if (_counter == 0)
                 {
-                    //TODO CAMBIO DE ESCENA
+                    OnPartPassSound.Invoke();
                     GameManager.GameWin();
                 }
                 break;
         }
-
-        UpdateText();
     }
 
     private void UpdateText()

@@ -28,6 +28,9 @@ public class Movement : MonoBehaviour
     public delegate void HitTennisBall(int direction);
     public static event HitTennisBall OnHitTennisBall;
 
+    public delegate void HitSound();
+    public static event HitSound OnHitSound;
+
     void Start()
     {
         _canHit = false;
@@ -129,7 +132,7 @@ public class Movement : MonoBehaviour
 
             _animator.SetBool("Hit", true);
 
-            //TODO SONIDO DE RAQUETAZO
+            OnHitSound?.Invoke();
         }
     }
 
