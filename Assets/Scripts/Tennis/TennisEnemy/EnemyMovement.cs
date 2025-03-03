@@ -21,6 +21,8 @@ public class EnemyMovement : MonoBehaviour
 
     private SpriteRenderer _sprite;
 
+    private Animator _animator;
+
     public delegate void EnemyHitBall(int direction);
     public static event EnemyHitBall OnEnemyHitBall;
 
@@ -32,6 +34,8 @@ public class EnemyMovement : MonoBehaviour
         
         _facingRight = true;
         _sprite = GetComponent<SpriteRenderer>();
+
+        _animator = GetComponent<Animator>();
 
         this.transform.position = new Vector2(_initialPositionX, _initialPositionY);
     }
@@ -72,7 +76,14 @@ public class EnemyMovement : MonoBehaviour
                     _facingRight = false;
                 }
             }
+            _animator.SetBool("Mov", true);
         }
+        else{
+            _rb.linearVelocity = Vector2.zero;
+
+            _animator.SetBool("Mov", false);
+        }
+        _animator.SetBool("Hit", false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -82,6 +93,8 @@ public class EnemyMovement : MonoBehaviour
             if (_target.position.x > 1) OnEnemyHitBall?.Invoke(-1);
             else if (_target.position.x < 1) OnEnemyHitBall?.Invoke(1);
             else OnEnemyHitBall?.Invoke(0);
+
+            _animator.SetBool("Hit", true);
 
             //TODO SONIDO DE RAQUETAZO
         }

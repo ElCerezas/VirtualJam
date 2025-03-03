@@ -23,6 +23,8 @@ public class Movement : MonoBehaviour
 
     private bool _canHit;
 
+    private Animator _animator;
+
     public delegate void HitTennisBall(int direction);
     public static event HitTennisBall OnHitTennisBall;
 
@@ -32,6 +34,7 @@ public class Movement : MonoBehaviour
         _right = true;
         _sprite = GetComponent<SpriteRenderer>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
 
         this.transform.position = new Vector2(_initialPositionX, _initialPositionY);
     }
@@ -49,6 +52,13 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         _rigidbody.linearVelocity = _velocity;
+
+        if (_velocity.x == 0)
+        {
+            _animator.SetBool("Mov", false);
+        }
+
+        _animator.SetBool("Hit", false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -73,6 +83,7 @@ public class Movement : MonoBehaviour
 
         if (direccion.x < 0)
         {
+            _animator.SetBool("Mov", true);
             if (_right)
             {
                 _right = false;
@@ -117,6 +128,8 @@ public class Movement : MonoBehaviour
             }
 
             _canHit = false;
+
+            _animator.SetBool("Hit", true);
 
             //TODO SONIDO DE RAQUETAZO
         }
