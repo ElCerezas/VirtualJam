@@ -16,7 +16,7 @@ MonoBehaviour:
   Character: {fileID: -346877676, guid: 8028421d8d8fcb045ad74cdd9101b4bc, type: 3}
   TextImage: {fileID: -1741066616288840682, guid: 74131ddc61602ca4c9443fa8d8f91c8b, type: 3}
   Name: "Psic\xF3loga"
-  Dialog: (Si que es verdad, parece que lleve una mochila)
+  Dialog: '*Si que es verdad, parece que lleve una mochila'
   writtingSpeed: 0.05
   audio: {fileID: 0}
   fadeOut: 0

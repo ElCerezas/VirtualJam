@@ -61,6 +61,10 @@ public class BGMusicLogic : MonoBehaviour
                     bgMusic.clip = musicas[3];
                     bgMusic.Play();
                     break;
+                case 7:
+                    bgMusic.clip = musicas[4];
+                    bgMusic.Play();
+                    break;
                 default:
                     if (bgMusic.clip == musicas[0])
                     {
