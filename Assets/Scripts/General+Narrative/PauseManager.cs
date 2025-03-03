@@ -26,21 +26,31 @@ public class PauseManager : MonoBehaviour
         ResumeGame(); // Asegura que el juego empiece despausado
     }
 
-    //Ajustes de volumenes:
+    void Update()
+    {
+        // Detecta la tecla Escape en teclado o el botón Start en un mando
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Start"))
+        {
+            Debug.Log("PauseButton");
+            OnPause();
+        }
+    }
+
+    // Ajustes de volúmenes:
     public void NewSoundVolume()
     {
         VFXvolume = VFXSlider.value;
         PlayerPrefs.SetFloat("soundVolume", VFXvolume);
         OnVolumeChange?.Invoke(VFXvolume);
     }
+
     public void MusicChange()
     {
         musicSoundSource.volume = musicSlider.value;
         PlayerPrefs.SetFloat("musicVolume", musicSlider.value);
     }
 
-
-    //Pausa
+    // Pausa
     public void OnPause()
     {
         if (isPaused)
@@ -52,6 +62,7 @@ public class PauseManager : MonoBehaviour
             PauseGame();
         }
     }
+
     private void PauseGame()
     {
         isPaused = true;
@@ -60,15 +71,17 @@ public class PauseManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
+
     private void ResumeGame()
     {
         isPaused = false;
         pauseScreen.SetActive(false);
         Time.timeScale = 1f; // Reanuda el juego
-        if (gameManager.GetSceneIndex() == 3 || gameManager.GetSceneIndex() == 4 || gameManager.GetSceneIndex() == 5) 
+
+        if (gameManager.GetSceneIndex() == 3 || gameManager.GetSceneIndex() == 4 || gameManager.GetSceneIndex() == 5)
         {
             Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked; 
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }
