@@ -105,6 +105,7 @@ public class GameCounter : MonoBehaviour
                 if (_counter == 0)
                 {
                     //TODO CAMBIO DE ESCENA
+                    GameManager.GameWin();
                 }
                 break;
         }

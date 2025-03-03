@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 27d1c5d7d65987e49a02797d42ded331
+guid: 04b02646e494cde41b043c14dd19d0eb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5026861532717554614
-    second: TennisGPT_0
+      213: 7701309635898935166
+    second: TennisInSpace_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TennisGPT_0
+      name: TennisInSpace_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6bb94b83eeff2c540800000000000000
-      internalID: 5026861532717554614
+      spriteID: e778c018f4c80ea60800000000000000
+      internalID: 7701309635898935166
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TennisGPT_0: 5026861532717554614
+      TennisInSpace_0: 7701309635898935166
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

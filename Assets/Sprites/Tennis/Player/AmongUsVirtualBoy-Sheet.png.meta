@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 27d1c5d7d65987e49a02797d42ded331
+guid: 7748319c922dadd4582a5c8debffec69
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5026861532717554614
-    second: TennisGPT_0
+      213: 1564666053812752020
+    second: AmongUsVirtualBoy-Sheet_0
+  - first:
+      213: 2440639061359184329
+    second: AmongUsVirtualBoy-Sheet_1
+  - first:
+      213: 2048324102093334853
+    second: AmongUsVirtualBoy-Sheet_2
+  - first:
+      213: -2765586921408108930
+    second: AmongUsVirtualBoy-Sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TennisGPT_0
+      name: AmongUsVirtualBoy-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        y: 6
+        width: 45
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6bb94b83eeff2c540800000000000000
-      internalID: 5026861532717554614
+      spriteID: 49e0f996c7fc6b510800000000000000
+      internalID: 1564666053812752020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongUsVirtualBoy-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 6
+        width: 45
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9c1459b44eed120800000000000000
+      internalID: 2440639061359184329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongUsVirtualBoy-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 6
+        width: 45
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549e42a1beb1d6c10800000000000000
+      internalID: 2048324102093334853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmongUsVirtualBoy-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 6
+        width: 45
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e76e0020959ae99d0800000000000000
+      internalID: -2765586921408108930
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TennisGPT_0: 5026861532717554614
+      AmongUsVirtualBoy-Sheet_0: 1564666053812752020
+      AmongUsVirtualBoy-Sheet_1: 2440639061359184329
+      AmongUsVirtualBoy-Sheet_2: 2048324102093334853
+      AmongUsVirtualBoy-Sheet_3: -2765586921408108930
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
