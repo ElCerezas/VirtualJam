@@ -1,8 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using static UnityEngine.RuleTile.TilingRuleOutput;
-
 public enum RockType
 {
     Ground,

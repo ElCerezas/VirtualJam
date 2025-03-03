@@ -19,4 +19,8 @@ public class WarioStateManager : MonoBehaviour
             Instance = this;
         } 
     }
+    private void Start()
+    {
+        IsInForeground = true;
+    }
 }

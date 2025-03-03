@@ -16,28 +16,19 @@ public class WarioDash : MonoBehaviour
 
     private Rigidbody2D rb;
     private WarioStateManager stateManager;
-    private WarioMovement movement;
     private SpriteRenderer playerSprite;
 
-    private int updateCounter = 0;
-
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
 
     private void Start()
     {
         stateManager = WarioStateManager.Instance;
-        movement = WarioMovement.Instance;
         nextDashTime = Time.time;
         playerSprite = GetComponent<SpriteRenderer>();
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        updateCounter++;
         if (stateManager.IsDashing)
         {
             if (!stateManager.IsJumping && Time.time >= dashEndTime)

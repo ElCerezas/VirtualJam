@@ -1,7 +1,4 @@
-using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class BackgroundController : MonoBehaviour
 {
@@ -14,7 +11,6 @@ public class BackgroundController : MonoBehaviour
     public float VelocityFirstPlane = 1f;
     public float VelocitySecondPlane;
 
-    [SerializeField]
     private WarioMovement playerMovement;
 
     private void OnEnable()
@@ -30,6 +26,7 @@ public class BackgroundController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerMovement = WarioMovement.Instance;
         SecondInitialPos = SecondPlane.position;
     }
 

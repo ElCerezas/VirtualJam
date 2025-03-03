@@ -29,16 +29,16 @@ public class WarioMovement : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            player = GetComponent<Transform>();
-            rb = GetComponent<Rigidbody2D>();
         }
     }
     private void Start()
     {
-        stateManager = WarioStateManager.Instance;
+        player = GetComponent<Transform>();
+        rb = GetComponent<Rigidbody2D>();
         moveSpeed = foreMoveSpeed;
         jumpForce = foreJumpForce;
         transform.localScale = new Vector3(1f, 1f, 0.16f);
+        stateManager = WarioStateManager.Instance;
     }
 
     private void FixedUpdate()
@@ -48,6 +48,7 @@ public class WarioMovement : MonoBehaviour
 
     public void OnJump()
     {
+        if (stateManager == null) Debug.Log("No hi ha state manager!!");
         if (stateManager != null)
         {
             if (stateManager.IsGrounded)
@@ -68,7 +69,6 @@ public class WarioMovement : MonoBehaviour
     {
         rb.linearVelocityY = 0;
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        WarioAnimation.OnJumpStarted.Invoke();
     }
 
     private IEnumerator SwitchPlane()
